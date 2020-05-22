@@ -31,6 +31,10 @@ from azure.cli.command_modules.vm._image_builder import (
 from azure.cli.core.commands import DeploymentOutputLongRunningOperation, CliCommandType
 from azure.cli.core.commands.arm import deployment_validate_table_format, handle_template_based_exception
 
+from azure.cli.command_modules.monitor._exception_handler import monitor_exception_handler
+from azure.cli.command_modules.monitor._client_factory import cf_metric_def
+from azure.cli.core.profiles import ResourceType
+
 
 # pylint: disable=line-too-long, too-many-statements, too-many-locals
 def load_command_table(self, _):
@@ -178,6 +182,17 @@ def load_command_table(self, _):
         client_factory=cf_disk_encryption_set
     )
 
+    monitor_custom = CliCommandType(
+        operations_tmpl='azure.cli.command_modules.monitor.custom#{}',
+        exception_handler=monitor_exception_handler)
+
+    metric_definitions_sdk = CliCommandType(
+        operations_tmpl='azure.mgmt.monitor.operations#MetricDefinitionsOperations.{}',
+        resource_type=ResourceType.MGMT_MONITOR,
+        client_factory=cf_metric_def,
+        operation_group='metric_definitions',
+        exception_handler=monitor_exception_handler)
+
     with self.command_group('disk', compute_disk_sdk, operation_group='disks', min_api='2017-03-30') as g:
         g.custom_command('create', 'create_managed_disk', supports_no_wait=True, table_transformer=transform_disk_show_table_output, validator=process_disk_or_snapshot_create_namespace)
         g.command('delete', 'delete', supports_no_wait=True, confirmation=True)
@@ -188,7 +203,7 @@ def load_command_table(self, _):
         g.generic_update_command('update', custom_func_name='update_managed_disk', setter_arg_name='disk', supports_no_wait=True)
         g.wait_command('wait')
 
-    with self.command_group('disk-encryption-set', compute_disk_encryption_set_sdk, client_factory=cf_disk_encryption_set, min_api='2019-07-01', is_preview=True) as g:
+    with self.command_group('disk-encryption-set', compute_disk_encryption_set_sdk, client_factory=cf_disk_encryption_set, min_api='2019-07-01') as g:
         g.custom_command('create', 'create_disk_encryption_set', supports_no_wait=True)
         g.command('delete', 'delete')
         g.generic_update_command('update', custom_func_name='update_disk_encryption_set', setter_arg_name='disk_encryption_set')
@@ -202,7 +217,7 @@ def load_command_table(self, _):
         g.command('delete', 'delete')
         g.generic_update_command('update', custom_func_name='update_image')
 
-    with self.command_group('image template', image_builder_image_templates_sdk, custom_command_type=image_builder_custom, is_preview=True) as g:
+    with self.command_group('image builder', image_builder_image_templates_sdk, custom_command_type=image_builder_custom, is_preview=True) as g:
         g.custom_command('create', 'create_image_template', supports_no_wait=True, supports_local_cache=True, validator=process_image_template_create_namespace)
         g.custom_command('list', 'list_image_templates')
         g.command('show', 'get')
@@ -212,12 +227,12 @@ def load_command_table(self, _):
         g.command('run', 'run', supports_no_wait=True)
         g.custom_command('show-runs', 'show_build_output')
 
-    with self.command_group('image template customizer', image_builder_image_templates_sdk, custom_command_type=image_builder_custom) as g:
+    with self.command_group('image builder customizer', image_builder_image_templates_sdk, custom_command_type=image_builder_custom) as g:
         g.custom_command('add', 'add_template_customizer', supports_local_cache=True, validator=process_img_tmpl_customizer_add_namespace)
         g.custom_command('remove', 'remove_template_customizer', supports_local_cache=True)
         g.custom_command('clear', 'clear_template_customizer', supports_local_cache=True)
 
-    with self.command_group('image template output', image_builder_image_templates_sdk, custom_command_type=image_builder_custom) as g:
+    with self.command_group('image builder output', image_builder_image_templates_sdk, custom_command_type=image_builder_custom) as g:
         g.custom_command('add', 'add_template_output', supports_local_cache=True, validator=process_img_tmpl_output_add_namespace)
         g.custom_command('remove', 'remove_template_output', supports_local_cache=True)
         g.custom_command('clear', 'clear_template_output', supports_local_cache=True)
@@ -258,8 +273,10 @@ def load_command_table(self, _):
         g.custom_show_command('show', 'show_vm', table_transformer=transform_vm)
         g.command('start', 'start', supports_no_wait=True)
         g.command('stop', 'power_off', supports_no_wait=True, validator=process_vm_vmss_stop)
+        g.command('reapply', 'reapply', supports_no_wait=True, min_api='2019-07-01')
         g.generic_update_command('update', setter_name='update_vm', setter_type=compute_custom, supports_no_wait=True)
         g.wait_command('wait', getter_name='get_instance_view', getter_type=compute_custom)
+        g.custom_command('auto-shutdown', 'auto_shutdown_vm')
 
     with self.command_group('vm availability-set', compute_availset_sdk) as g:
         g.custom_command('convert', 'convert_av_set_to_managed_disk', min_api='2016-04-30-preview')
@@ -268,7 +285,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_av_sets')
         g.command('list-sizes', 'list_available_sizes')
         g.show_command('show', 'get')
-        g.generic_update_command('update')
+        g.generic_update_command('update', custom_func_name='update_av_set')
 
     with self.command_group('vm boot-diagnostics', compute_vm_sdk) as g:
         g.custom_command('disable', 'disable_boot_diagnostics')
@@ -307,7 +324,7 @@ def load_command_table(self, _):
         g.command('list-skus', 'list_skus')
         g.custom_command('list', 'list_vm_images')
         g.custom_command('accept-terms', 'accept_market_ordering_terms',
-                         deprecate_info=g.deprecate(redirect='az vm image terms accept', expiration='2.0.82'))
+                         deprecate_info=g.deprecate(redirect='az vm image terms accept', expiration='3.0.0'))
         g.custom_show_command('show', 'show_vm_image')
 
     with self.command_group('vm image terms', compute_vm_image_term_sdk, validator=None) as g:
@@ -344,7 +361,7 @@ def load_command_table(self, _):
         g.custom_command('reset-ssh', 'reset_linux_ssh')
 
     with self.command_group('vm host', compute_dedicated_host_sdk, client_factory=cf_dedicated_hosts,
-                            min_api='2019-03-01', is_preview=True) as g:
+                            min_api='2019-03-01') as g:
         g.show_command('show', 'get')
         g.custom_command('get-instance-view', 'get_dedicated_host_instance_view')
         g.custom_command('create', 'create_dedicated_host')
@@ -353,7 +370,7 @@ def load_command_table(self, _):
         g.command('delete', 'delete', confirmation=True)
 
     with self.command_group('vm host group', compute_dedicated_host_groups_sdk, client_factory=cf_dedicated_host_groups,
-                            min_api='2019-03-01', is_preview=True) as g:
+                            min_api='2019-03-01') as g:
         g.show_command('show', 'get')
         g.custom_command('create', 'create_dedicated_host_group')
         g.custom_command('list', 'list_dedicated_host_groups')
@@ -385,6 +402,7 @@ def load_command_table(self, _):
         g.custom_command('update-instances', 'update_vmss_instances', supports_no_wait=True)
         g.wait_command('wait', getter_name='get_vmss', getter_type=compute_custom)
         g.command('get-os-upgrade-history', 'get_os_upgrade_history', min_api='2018-10-01')
+        g.custom_command('set-orchestration-service-state', 'set_orchestration_service_state', supports_no_wait=True)
 
     with self.command_group('vmss diagnostics', compute_vmss_sdk) as g:
         g.custom_command('set', 'set_vmss_diagnostics_extension')
@@ -449,7 +467,7 @@ def load_command_table(self, _):
         g.wait_command('wait')
 
     with self.command_group('ppg', compute_proximity_placement_groups_sdk, min_api='2018-04-01', client_factory=cf_proximity_placement_groups) as g:
-        g.command('show', 'get')
+        g.show_command('show', 'get')
         g.custom_command('create', 'create_proximity_placement_group')
         g.custom_command('list', 'list_proximity_placement_groups')
         g.generic_update_command('update')
@@ -457,3 +475,12 @@ def load_command_table(self, _):
 
     with self.command_group('vm monitor log', log_analytics_data_plane_sdk, client_factory=cf_log_analytics_data_plane) as g:
         g.custom_command('show', 'execute_query_for_vm', transform=transform_log_analytics_query_output)
+
+    with self.command_group('vm monitor metrics', custom_command_type=monitor_custom, command_type=metric_definitions_sdk, resource_type=ResourceType.MGMT_MONITOR, operation_group='metric_definitions', min_api='2018-01-01', is_preview=True) as g:
+        from azure.cli.command_modules.monitor.transformers import metrics_table, metrics_definitions_table
+        from azure.cli.core.profiles._shared import APIVersionException
+        try:
+            g.custom_command('tail', 'list_metrics', command_type=monitor_custom, table_transformer=metrics_table)
+            g.command('list-definitions', 'list', table_transformer=metrics_definitions_table)
+        except APIVersionException:
+            pass

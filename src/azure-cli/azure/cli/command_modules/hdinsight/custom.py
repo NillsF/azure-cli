@@ -16,6 +16,8 @@ def create_cluster(cmd, client, cluster_name, resource_group_name, cluster_type,
                    location=None, tags=None, no_wait=False, cluster_version='default', cluster_tier=None,
                    cluster_configurations=None, component_version=None,
                    headnode_size='large', workernode_size='large', zookeepernode_size=None, edgenode_size=None,
+                   kafka_management_node_size=None, kafka_management_node_count=2,
+                   kafka_client_group_id=None, kafka_client_group_name=None,
                    workernode_count=3, workernode_data_disks_per_node=None,
                    workernode_data_disk_storage_account_type=None, workernode_data_disk_size=None,
                    http_username=None, http_password=None,
@@ -28,6 +30,7 @@ def create_cluster(cmd, client, cluster_name, resource_group_name, cluster_type,
                    cluster_admin_account=None, cluster_admin_password=None,
                    cluster_users_group_dns=None,
                    assign_identity=None,
+                   minimal_tls_version=None,
                    encryption_vault_uri=None, encryption_key_name=None, encryption_key_version=None,
                    encryption_algorithm='RSA-OAEP', esp=False, no_validation_timeout=False):
     from .util import build_identities_info, build_virtual_network_profile, parse_domain_name, \
@@ -35,7 +38,8 @@ def create_cluster(cmd, client, cluster_name, resource_group_name, cluster_type,
     from azure.mgmt.hdinsight.models import ClusterCreateParametersExtended, ClusterCreateProperties, OSType, \
         ClusterDefinition, ComputeProfile, HardwareProfile, Role, OsProfile, LinuxOperatingSystemProfile, \
         StorageProfile, StorageAccount, DataDisksGroups, SecurityProfile, \
-        DirectoryType, DiskEncryptionProperties, Tier, SshProfile, SshPublicKey
+        DirectoryType, DiskEncryptionProperties, Tier, SshProfile, SshPublicKey, \
+        KafkaRestProperties, ClientGroupInfo
 
     validate_esp_cluster_create_params(esp, cluster_name, resource_group_name, cluster_type,
                                        subnet, domain, cluster_admin_account, assign_identity,
@@ -128,6 +132,11 @@ def create_cluster(cmd, client, cluster_name, resource_group_name, cluster_type,
         raise CLIError('Either the encryption vault URI, key name and key version should be specified, '
                        'or none of them should be.')
 
+    # Validate kafka rest proxy parameters
+    if not _all_or_none(kafka_client_group_id, kafka_client_group_name):
+        raise CLIError('Either the kafka client group id and kafka client group name should be specified, '
+                       'or none of them should be')
+
     # Specify virtual network profile only when network arguments are provided
     virtual_network_profile = subnet and build_virtual_network_profile(subnet)
 
@@ -175,6 +184,7 @@ def create_cluster(cmd, client, cluster_name, resource_group_name, cluster_type,
             data_disks_groups=workernode_data_disk_groups
         )
     ]
+
     if zookeepernode_size:
         roles.append(
             Role(
@@ -193,6 +203,17 @@ def create_cluster(cmd, client, cluster_name, resource_group_name, cluster_type,
                 os_profile=os_profile,
                 virtual_network_profile=virtual_network_profile
             ))
+    if kafka_management_node_size:
+        # generate kafkaRestProperties
+        roles.append(
+            Role(
+                name="kafkamanagementnode",
+                target_instance_count=kafka_management_node_count,
+                hardware_profile=HardwareProfile(vm_size=kafka_management_node_size),
+                os_profile=os_profile,
+                virtual_network_profile=virtual_network_profile
+            )
+        )
 
     storage_accounts = []
     if storage_account:
@@ -253,6 +274,13 @@ def create_cluster(cmd, client, cluster_name, resource_group_name, cluster_type,
         msi_resource_id=assign_identity
     )
 
+    kafka_rest_properties = (kafka_client_group_id and kafka_client_group_name) and KafkaRestProperties(
+        client_group_info=ClientGroupInfo(
+            group_id=kafka_client_group_id,
+            group_name=kafka_client_group_name
+        )
+    )
+
     create_params = ClusterCreateParametersExtended(
         location=location,
         tags=tags,
@@ -272,7 +300,9 @@ def create_cluster(cmd, client, cluster_name, resource_group_name, cluster_type,
                 storageaccounts=storage_accounts
             ),
             security_profile=security_profile,
-            disk_encryption_properties=disk_encryption_properties
+            disk_encryption_properties=disk_encryption_properties,
+            kafka_rest_properties=kafka_rest_properties,
+            min_supported_tls_version=minimal_tls_version
         ),
         identity=cluster_identity
     )
@@ -415,7 +445,8 @@ def enable_hdi_monitoring(cmd, client, resource_group_name, cluster_name, worksp
 
         # Only retrieve primary key when not provided
         if not primary_key:
-            shared_keys = log_analytics_client.workspaces.get_shared_keys(workspace_resource_group_name, workspace_name)
+            shared_keys = log_analytics_client.shared_keys.get_shared_keys(workspace_resource_group_name,
+                                                                           workspace_name)
             if not shared_keys:
                 raise CLIError('Fails to retrieve shared key for workspace {}'.format(log_analytics_workspace))
 

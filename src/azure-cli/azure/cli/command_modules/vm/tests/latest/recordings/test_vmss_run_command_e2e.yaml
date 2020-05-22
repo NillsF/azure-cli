@@ -13,8 +13,8 @@ interactions:
       ParameterSetName:
       - -l
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-compute/9.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/12.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
       accept-language:
       - en-US
     method: GET
@@ -101,7 +101,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:44:44 GMT
+      - Mon, 18 May 2020 12:39:20 GMT
       expires:
       - '-1'
       pragma:
@@ -118,7 +118,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/GetSubscriptionInfo3Min;419
+      - Microsoft.Compute/GetSubscriptionInfo3Min;359
     status:
       code: 200
       message: OK
@@ -136,8 +136,8 @@ interactions:
       ParameterSetName:
       - --command-id -l
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-compute/9.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/12.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
       accept-language:
       - en-US
     method: GET
@@ -161,7 +161,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:44:45 GMT
+      - Mon, 18 May 2020 12:39:20 GMT
       expires:
       - '-1'
       pragma:
@@ -178,7 +178,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/GetSubscriptionInfo3Min;418
+      - Microsoft.Compute/GetSubscriptionInfo3Min;358
     status:
       code: 200
       message: OK
@@ -196,24 +196,24 @@ interactions:
       ParameterSetName:
       - -g -n --image --admin-username --instance-count --generate-ssh-keys --disable-overprovision
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-resource/4.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/9.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
       accept-language:
       - en-US
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vmss_run_command000001?api-version=2019-07-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001","name":"cli_test_vmss_run_command000001","type":"Microsoft.Resources/resourceGroups","location":"westus","tags":{"product":"azurecli","cause":"automation","date":"2019-11-01T08:44:39Z"},"properties":{"provisioningState":"Succeeded"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001","name":"cli_test_vmss_run_command000001","type":"Microsoft.Resources/resourceGroups","location":"westus","tags":{"product":"azurecli","cause":"automation","date":"2020-05-18T12:39:15Z","StorageType":"Standard_LRS","type":"test"},"properties":{"provisioningState":"Succeeded"}}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '428'
+      - '471'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:44:46 GMT
+      - Mon, 18 May 2020 12:39:22 GMT
       expires:
       - '-1'
       pragma:
@@ -292,37 +292,36 @@ interactions:
       content-type:
       - text/plain; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:44:47 GMT
+      - Mon, 18 May 2020 12:39:22 GMT
       etag:
       - W/"540044b4084c3c314537f1baa1770f248628b2bc9ba0328f1004c33862e049da"
       expires:
-      - Fri, 01 Nov 2019 08:49:47 GMT
+      - Mon, 18 May 2020 12:44:22 GMT
       source-age:
-      - '225'
+      - '115'
       strict-transport-security:
       - max-age=31536000
       vary:
-      - Authorization,Accept-Encoding, Accept-Encoding
+      - Authorization,Accept-Encoding
       via:
+      - 1.1 varnish (Varnish/6.0)
       - 1.1 varnish
       x-cache:
-      - HIT
+      - HIT, HIT
       x-cache-hits:
-      - '9'
+      - 1, 1
       x-content-type-options:
       - nosniff
       x-fastly-request-id:
-      - 98fc4892bca9e19f30538ec6b65c13c2378e414a
+      - e2cb52501367db50c02bf9c2e62c13d3ebcd8e60
       x-frame-options:
       - deny
-      x-geo-block-list:
-      - ''
       x-github-request-id:
-      - FAE0:044A:2555B:2F7EE:5DBBEF9E
+      - 9C76:19E7:4B19CC:50B342:5EC26F14
       x-served-by:
-      - cache-sin18031-SIN
+      - cache-sin18050-SIN
       x-timer:
-      - S1572597887.173860,VS0,VE0
+      - S1589805563.582087,VS0,VE238
       x-xss-protection:
       - 1; mode=block
     status:
@@ -342,8 +341,8 @@ interactions:
       ParameterSetName:
       - -g -n --image --admin-username --instance-count --generate-ssh-keys --disable-overprovision
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-network/7.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/10.2.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
       accept-language:
       - en-US
     method: GET
@@ -359,7 +358,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:44:47 GMT
+      - Mon, 18 May 2020 12:39:22 GMT
       expires:
       - '-1'
       pragma:
@@ -394,25 +393,24 @@ interactions:
       22}}], "frontendIPConfigurations": [{"name": "loadBalancerFrontEnd", "properties":
       {"publicIPAddress": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/publicIPAddresses/test-run-command-vmssLBPublicIP"}}}]}},
       {"type": "Microsoft.Compute/virtualMachineScaleSets", "name": "test-run-command-vmss",
-      "location": "westus", "tags": {}, "apiVersion": "2019-07-01", "dependsOn": ["Microsoft.Network/virtualNetworks/test-run-command-vmssVNET",
+      "location": "westus", "tags": {}, "apiVersion": "2019-12-01", "dependsOn": ["Microsoft.Network/virtualNetworks/test-run-command-vmssVNET",
       "Microsoft.Network/loadBalancers/test-run-command-vmssLB"], "sku": {"name":
       "Standard_DS1_v2", "capacity": 1}, "properties": {"overprovision": false, "upgradePolicy":
       {"mode": "manual"}, "virtualMachineProfile": {"storageProfile": {"osDisk": {"createOption":
       "FromImage", "caching": "ReadWrite", "managedDisk": {"storageAccountType": null}},
       "imageReference": {"publisher": "Canonical", "offer": "UbuntuServer", "sku":
-      "18.04-LTS", "version": "latest"}}, "osProfile": {"computerNamePrefix": "testr694e",
-      "adminUsername": "clitest1", "linuxConfiguration": {"disablePasswordAuthentication":
-      true, "ssh": {"publicKeys": [{"path": "/home/clitest1/.ssh/authorized_keys",
-      "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDmzXeK++L20uMK/Ug5wpjnWWyMlHoecEOxyHueHc1gPDj8qgLChiHt1OWJ1sDjiqBJ+hEEwZLjN8lCmUvWzzrl20d7M/BVp1ejulE/zr999kWuY3m5+FpAkbbxeO9LWoafwOir9dPzIOjDGdPWKbgHr3SerOHAuvVdXJDhWHtW5lB/MEnrxi48Pz/8k1lD1YccUAI6zDgKVJPBEk9fWMW8H0hKYsRXmlxdtg2npBQK7kbmcB2NJPEhTVgxVPqSaBVAt2lOCC/QQvAXcoD0lJGujp1IVYqSUarS5RnrYEDZ9Q6EKduWrP0GFkFkF8YzpFe+BRFaV8bLJrvZN43vgzRj
-      fey@DESKTOP-ARGPJS4\\n"}]}}}, "networkProfile": {"networkInterfaceConfigurations":
-      [{"name": "testr694eNic", "properties": {"primary": "true", "ipConfigurations":
-      [{"name": "testr694eIPConfig", "properties": {"subnet": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET/subnets/test-run-command-vmssSubnet"},
+      "18.04-LTS", "version": "latest"}}, "networkProfile": {"networkInterfaceConfigurations":
+      [{"name": "testr29f5Nic", "properties": {"primary": "true", "ipConfigurations":
+      [{"name": "testr29f5IPConfig", "properties": {"subnet": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET/subnets/test-run-command-vmssSubnet"},
       "loadBalancerBackendAddressPools": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/backendAddressPools/test-run-command-vmssLBBEPool"}],
-      "loadBalancerInboundNatPools": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatPools/test-run-command-vmssLBNatPool"}]}}]}}]}},
-      "singlePlacementGroup": null}}], "outputs": {"VMSS": {"type": "object", "value":
-      "[reference(resourceId(\''Microsoft.Compute/virtualMachineScaleSets\'', \''test-run-command-vmss\''),providers(\''Microsoft.Compute\'',
-      \''virtualMachineScaleSets\'').apiVersions[0])]"}}}, "parameters": {}, "mode":
-      "Incremental"}}'''
+      "loadBalancerInboundNatPools": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatPools/test-run-command-vmssLBNatPool"}]}}]}}]},
+      "osProfile": {"computerNamePrefix": "testr29f5", "adminUsername": "clitest1",
+      "linuxConfiguration": {"disablePasswordAuthentication": true, "ssh": {"publicKeys":
+      [{"path": "/home/clitest1/.ssh/authorized_keys", "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC/6lyAsWCEt5FlwlP4E2dBLTrJlQ8F8eM7P+N60KN/G59ytk5e1hUZ9BsCLOQ+Ebh9Fq/ck2k2AbOPhTk+PcUOMDSTkxPIXcA/zUtfKOV9VHf4urkVFy+4mN9+xcs7NlAbyj0ZImvy3SIsdlL4dO3FWJ81QtRUOgdYQq5cBXi0eExClt0Hfjq4T4FqU0GKhjOnaO/MLZ7gf0UfWdqmYqUWOE5EZKdml1PG/LeYG5y7oXQ1uCz9wwsa8DO3PzUSzCw8RK1/6MJQIyBbytz2LzXSidHj8tHFkxt9Flhh+CeeoDTJYm13Jvic9DxrqFY3Px7+9Bt6D0exV+USneFGB2LRJk2Bm6Nz6/FYlyXUAgZbZx2w3ZSXhaiNoW7UfD4GJ5E9O3F2T0atN/IgW2IHp1wNdr8AAT18YqkN69iBSL1Rx9eel/V6YYjhG7F6dTHCsJUB1qQWoCEaWwiRw57fsrO2XRzF79QK96Oz4VkLZvJj/PhR4ez+/tsjIT5TKWKGHstQ4VNvvuUhbYt+SI3aLxg8EuEgmvfaJ3k77+ceb7Sy3WsWHyRDgmypHe1ncYqFMONTwGcPO5snIH40C34eD5hy3t3myX8WVpDwcBrn44cqQ722Q6u6z/qEpC4sDsYCH9fp+7/PMGQWwwgdqf7Leqe4IKxIL+OxoXxUswat/6wzpQ==
+      fanqiu@microsoft.com\\n"}]}}}}, "singlePlacementGroup": null}}], "outputs":
+      {"VMSS": {"type": "object", "value": "[reference(resourceId(\''Microsoft.Compute/virtualMachineScaleSets\'',
+      \''test-run-command-vmss\''),providers(\''Microsoft.Compute\'', \''virtualMachineScaleSets\'').apiVersions[0])]"}}},
+      "parameters": {}, "mode": "Incremental"}}'''
     headers:
       Accept:
       - application/json
@@ -423,32 +421,32 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4503'
+      - '4848'
       Content-Type:
       - application/json; charset=utf-8
       ParameterSetName:
       - -g -n --image --admin-username --instance-count --generate-ssh-keys --disable-overprovision
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-resource/4.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/9.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
       accept-language:
       - en-US
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2019-07-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/vmss_deploy_VofFs76odq8UBLOi9I9v5wUb07HFTIaU","name":"vmss_deploy_VofFs76odq8UBLOi9I9v5wUb07HFTIaU","type":"Microsoft.Resources/deployments","properties":{"templateHash":"9623849485102585719","parameters":{},"mode":"Incremental","provisioningState":"Accepted","timestamp":"2019-11-01T08:44:52.0715576Z","duration":"PT2.7538039S","correlationId":"304cc585-767e-4ce7-b4d4-493a6c6980c0","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"virtualNetworks","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"loadBalancers","locations":["westus"]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachineScaleSets","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET","resourceType":"Microsoft.Network/virtualNetworks","resourceName":"test-run-command-vmssVNET"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/publicIPAddresses/test-run-command-vmssLBPublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"test-run-command-vmssLBPublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB","resourceType":"Microsoft.Network/loadBalancers","resourceName":"test-run-command-vmssLB"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET","resourceType":"Microsoft.Network/virtualNetworks","resourceName":"test-run-command-vmssVNET"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB","resourceType":"Microsoft.Network/loadBalancers","resourceName":"test-run-command-vmssLB"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss","resourceType":"Microsoft.Compute/virtualMachineScaleSets","resourceName":"test-run-command-vmss"}]}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/vmss_deploy_c1MnggcGf5O8PnT4ZBRawJy5MchyBPq2","name":"vmss_deploy_c1MnggcGf5O8PnT4ZBRawJy5MchyBPq2","type":"Microsoft.Resources/deployments","properties":{"templateHash":"463847504412565992","parameters":{},"mode":"Incremental","provisioningState":"Accepted","timestamp":"2020-05-18T12:39:29.0740826Z","duration":"PT3.1854104S","correlationId":"68336eeb-b664-4e01-9d84-9d2f1251ea7b","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"virtualNetworks","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"loadBalancers","locations":["westus"]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachineScaleSets","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET","resourceType":"Microsoft.Network/virtualNetworks","resourceName":"test-run-command-vmssVNET"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/publicIPAddresses/test-run-command-vmssLBPublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"test-run-command-vmssLBPublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB","resourceType":"Microsoft.Network/loadBalancers","resourceName":"test-run-command-vmssLB"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET","resourceType":"Microsoft.Network/virtualNetworks","resourceName":"test-run-command-vmssVNET"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB","resourceType":"Microsoft.Network/loadBalancers","resourceName":"test-run-command-vmssLB"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss","resourceType":"Microsoft.Compute/virtualMachineScaleSets","resourceName":"test-run-command-vmss"}]}}'
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/vmss_deploy_VofFs76odq8UBLOi9I9v5wUb07HFTIaU/operationStatuses/08586290089961598679?api-version=2019-07-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/vmss_deploy_c1MnggcGf5O8PnT4ZBRawJy5MchyBPq2/operationStatuses/08586118013195889526?api-version=2019-07-01
       cache-control:
       - no-cache
       content-length:
-      - '2884'
+      - '2883'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:44:53 GMT
+      - Mon, 18 May 2020 12:39:33 GMT
       expires:
       - '-1'
       pragma:
@@ -458,7 +456,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1182'
+      - '1198'
     status:
       code: 201
       message: Created
@@ -476,10 +474,10 @@ interactions:
       ParameterSetName:
       - -g -n --image --admin-username --instance-count --generate-ssh-keys --disable-overprovision
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-resource/4.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/9.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586290089961598679?api-version=2019-07-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586118013195889526?api-version=2019-07-01
   response:
     body:
       string: '{"status":"Running"}'
@@ -491,7 +489,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:45:24 GMT
+      - Mon, 18 May 2020 12:40:04 GMT
       expires:
       - '-1'
       pragma:
@@ -519,10 +517,10 @@ interactions:
       ParameterSetName:
       - -g -n --image --admin-username --instance-count --generate-ssh-keys --disable-overprovision
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-resource/4.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/9.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586290089961598679?api-version=2019-07-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586118013195889526?api-version=2019-07-01
   response:
     body:
       string: '{"status":"Running"}'
@@ -534,7 +532,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:45:54 GMT
+      - Mon, 18 May 2020 12:40:34 GMT
       expires:
       - '-1'
       pragma:
@@ -562,10 +560,10 @@ interactions:
       ParameterSetName:
       - -g -n --image --admin-username --instance-count --generate-ssh-keys --disable-overprovision
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-resource/4.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/9.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586290089961598679?api-version=2019-07-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586118013195889526?api-version=2019-07-01
   response:
     body:
       string: '{"status":"Running"}'
@@ -577,7 +575,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:46:25 GMT
+      - Mon, 18 May 2020 12:41:05 GMT
       expires:
       - '-1'
       pragma:
@@ -605,10 +603,10 @@ interactions:
       ParameterSetName:
       - -g -n --image --admin-username --instance-count --generate-ssh-keys --disable-overprovision
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-resource/4.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/9.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586290089961598679?api-version=2019-07-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586118013195889526?api-version=2019-07-01
   response:
     body:
       string: '{"status":"Succeeded"}'
@@ -620,7 +618,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:46:56 GMT
+      - Mon, 18 May 2020 12:41:36 GMT
       expires:
       - '-1'
       pragma:
@@ -648,24 +646,24 @@ interactions:
       ParameterSetName:
       - -g -n --image --admin-username --instance-count --generate-ssh-keys --disable-overprovision
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-resource/4.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/9.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2019-07-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/vmss_deploy_VofFs76odq8UBLOi9I9v5wUb07HFTIaU","name":"vmss_deploy_VofFs76odq8UBLOi9I9v5wUb07HFTIaU","type":"Microsoft.Resources/deployments","properties":{"templateHash":"9623849485102585719","parameters":{},"mode":"Incremental","provisioningState":"Succeeded","timestamp":"2019-11-01T08:46:35.246929Z","duration":"PT1M45.9291753S","correlationId":"304cc585-767e-4ce7-b4d4-493a6c6980c0","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"virtualNetworks","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"loadBalancers","locations":["westus"]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachineScaleSets","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET","resourceType":"Microsoft.Network/virtualNetworks","resourceName":"test-run-command-vmssVNET"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/publicIPAddresses/test-run-command-vmssLBPublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"test-run-command-vmssLBPublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB","resourceType":"Microsoft.Network/loadBalancers","resourceName":"test-run-command-vmssLB"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET","resourceType":"Microsoft.Network/virtualNetworks","resourceName":"test-run-command-vmssVNET"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB","resourceType":"Microsoft.Network/loadBalancers","resourceName":"test-run-command-vmssLB"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss","resourceType":"Microsoft.Compute/virtualMachineScaleSets","resourceName":"test-run-command-vmss"}],"outputs":{"vmss":{"type":"Object","value":{"singlePlacementGroup":true,"upgradePolicy":{"mode":"Manual"},"virtualMachineProfile":{"osProfile":{"computerNamePrefix":"testr694e","adminUsername":"clitest1","linuxConfiguration":{"disablePasswordAuthentication":true,"ssh":{"publicKeys":[{"path":"/home/clitest1/.ssh/authorized_keys","keyData":"ssh-rsa
-        AAAAB3NzaC1yc2EAAAADAQABAAABAQDmzXeK++L20uMK/Ug5wpjnWWyMlHoecEOxyHueHc1gPDj8qgLChiHt1OWJ1sDjiqBJ+hEEwZLjN8lCmUvWzzrl20d7M/BVp1ejulE/zr999kWuY3m5+FpAkbbxeO9LWoafwOir9dPzIOjDGdPWKbgHr3SerOHAuvVdXJDhWHtW5lB/MEnrxi48Pz/8k1lD1YccUAI6zDgKVJPBEk9fWMW8H0hKYsRXmlxdtg2npBQK7kbmcB2NJPEhTVgxVPqSaBVAt2lOCC/QQvAXcoD0lJGujp1IVYqSUarS5RnrYEDZ9Q6EKduWrP0GFkFkF8YzpFe+BRFaV8bLJrvZN43vgzRj
-        fey@DESKTOP-ARGPJS4\n"}]},"provisionVMAgent":true},"secrets":[],"allowExtensionOperations":true,"requireGuestProvisionSignal":true},"storageProfile":{"osDisk":{"createOption":"FromImage","caching":"ReadWrite","managedDisk":{"storageAccountType":"Premium_LRS"}},"imageReference":{"publisher":"Canonical","offer":"UbuntuServer","sku":"18.04-LTS","version":"latest"}},"networkProfile":{"networkInterfaceConfigurations":[{"name":"testr694eNic","properties":{"primary":true,"enableAcceleratedNetworking":false,"dnsSettings":{"dnsServers":[]},"enableIPForwarding":false,"ipConfigurations":[{"name":"testr694eIPConfig","properties":{"subnet":{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET/subnets/test-run-command-vmssSubnet"},"privateIPAddressVersion":"IPv4","loadBalancerBackendAddressPools":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/backendAddressPools/test-run-command-vmssLBBEPool"}],"loadBalancerInboundNatPools":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatPools/test-run-command-vmssLBNatPool"}]}}]}}]}},"provisioningState":"Succeeded","overprovision":false,"doNotRunExtensionsOnOverprovisionedVMs":false,"uniqueId":"44d313be-e419-4d08-9b03-c17d83860a14"}}},"outputResources":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/publicIPAddresses/test-run-command-vmssLBPublicIP"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET"}]}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Resources/deployments/vmss_deploy_c1MnggcGf5O8PnT4ZBRawJy5MchyBPq2","name":"vmss_deploy_c1MnggcGf5O8PnT4ZBRawJy5MchyBPq2","type":"Microsoft.Resources/deployments","properties":{"templateHash":"463847504412565992","parameters":{},"mode":"Incremental","provisioningState":"Succeeded","timestamp":"2020-05-18T12:41:10.0085837Z","duration":"PT1M44.1199115S","correlationId":"68336eeb-b664-4e01-9d84-9d2f1251ea7b","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"virtualNetworks","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"loadBalancers","locations":["westus"]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachineScaleSets","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET","resourceType":"Microsoft.Network/virtualNetworks","resourceName":"test-run-command-vmssVNET"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/publicIPAddresses/test-run-command-vmssLBPublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"test-run-command-vmssLBPublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB","resourceType":"Microsoft.Network/loadBalancers","resourceName":"test-run-command-vmssLB"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET","resourceType":"Microsoft.Network/virtualNetworks","resourceName":"test-run-command-vmssVNET"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB","resourceType":"Microsoft.Network/loadBalancers","resourceName":"test-run-command-vmssLB"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss","resourceType":"Microsoft.Compute/virtualMachineScaleSets","resourceName":"test-run-command-vmss"}],"outputs":{"vmss":{"type":"Object","value":{"singlePlacementGroup":true,"upgradePolicy":{"mode":"Manual"},"virtualMachineProfile":{"osProfile":{"computerNamePrefix":"testr29f5","adminUsername":"clitest1","linuxConfiguration":{"disablePasswordAuthentication":true,"ssh":{"publicKeys":[{"path":"/home/clitest1/.ssh/authorized_keys","keyData":"ssh-rsa
+        AAAAB3NzaC1yc2EAAAADAQABAAACAQC/6lyAsWCEt5FlwlP4E2dBLTrJlQ8F8eM7P+N60KN/G59ytk5e1hUZ9BsCLOQ+Ebh9Fq/ck2k2AbOPhTk+PcUOMDSTkxPIXcA/zUtfKOV9VHf4urkVFy+4mN9+xcs7NlAbyj0ZImvy3SIsdlL4dO3FWJ81QtRUOgdYQq5cBXi0eExClt0Hfjq4T4FqU0GKhjOnaO/MLZ7gf0UfWdqmYqUWOE5EZKdml1PG/LeYG5y7oXQ1uCz9wwsa8DO3PzUSzCw8RK1/6MJQIyBbytz2LzXSidHj8tHFkxt9Flhh+CeeoDTJYm13Jvic9DxrqFY3Px7+9Bt6D0exV+USneFGB2LRJk2Bm6Nz6/FYlyXUAgZbZx2w3ZSXhaiNoW7UfD4GJ5E9O3F2T0atN/IgW2IHp1wNdr8AAT18YqkN69iBSL1Rx9eel/V6YYjhG7F6dTHCsJUB1qQWoCEaWwiRw57fsrO2XRzF79QK96Oz4VkLZvJj/PhR4ez+/tsjIT5TKWKGHstQ4VNvvuUhbYt+SI3aLxg8EuEgmvfaJ3k77+ceb7Sy3WsWHyRDgmypHe1ncYqFMONTwGcPO5snIH40C34eD5hy3t3myX8WVpDwcBrn44cqQ722Q6u6z/qEpC4sDsYCH9fp+7/PMGQWwwgdqf7Leqe4IKxIL+OxoXxUswat/6wzpQ==
+        fanqiu@microsoft.com\n"}]},"provisionVMAgent":true},"secrets":[],"allowExtensionOperations":true,"requireGuestProvisionSignal":true},"storageProfile":{"osDisk":{"createOption":"FromImage","caching":"ReadWrite","managedDisk":{"storageAccountType":"Premium_LRS"},"diskSizeGB":30},"imageReference":{"publisher":"Canonical","offer":"UbuntuServer","sku":"18.04-LTS","version":"latest"}},"networkProfile":{"networkInterfaceConfigurations":[{"name":"testr29f5Nic","properties":{"primary":true,"enableAcceleratedNetworking":false,"dnsSettings":{"dnsServers":[]},"enableIPForwarding":false,"ipConfigurations":[{"name":"testr29f5IPConfig","properties":{"subnet":{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET/subnets/test-run-command-vmssSubnet"},"privateIPAddressVersion":"IPv4","loadBalancerBackendAddressPools":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/backendAddressPools/test-run-command-vmssLBBEPool"}],"loadBalancerInboundNatPools":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatPools/test-run-command-vmssLBNatPool"}]}}]}}]}},"provisioningState":"Succeeded","overprovision":false,"doNotRunExtensionsOnOverprovisionedVMs":false,"uniqueId":"b2ee5d20-4ba4-4e60-8c03-48ba1083c0f4"}}},"outputResources":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/publicIPAddresses/test-run-command-vmssLBPublicIP"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET"}]}}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '6214'
+      - '6575'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:46:56 GMT
+      - Mon, 18 May 2020 12:41:36 GMT
       expires:
       - '-1'
       pragma:
@@ -693,23 +691,23 @@ interactions:
       ParameterSetName:
       - -g
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-network/7.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/10.2.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers?api-version=2019-09-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers?api-version=2020-04-01
   response:
     body:
       string: "{\r\n  \"value\": [\r\n    {\r\n      \"name\": \"test-run-command-vmssLB\",\r\n
         \     \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB\",\r\n
-        \     \"etag\": \"W/\\\"cfb8cc63-accf-4eea-a265-891054769232\\\"\",\r\n      \"type\":
+        \     \"etag\": \"W/\\\"8baf8dc5-04d8-4ed1-848f-d327b5eac255\\\"\",\r\n      \"type\":
         \"Microsoft.Network/loadBalancers\",\r\n      \"location\": \"westus\",\r\n
         \     \"tags\": {},\r\n      \"properties\": {\r\n        \"provisioningState\":
-        \"Succeeded\",\r\n        \"resourceGuid\": \"0a492d92-0860-4e1a-9aaf-a056229cba95\",\r\n
+        \"Succeeded\",\r\n        \"resourceGuid\": \"715e3c55-20fd-477b-9b3a-729a74274f0a\",\r\n
         \       \"frontendIPConfigurations\": [\r\n          {\r\n            \"name\":
         \"loadBalancerFrontEnd\",\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/frontendIPConfigurations/loadBalancerFrontEnd\",\r\n
-        \           \"etag\": \"W/\\\"cfb8cc63-accf-4eea-a265-891054769232\\\"\",\r\n
+        \           \"etag\": \"W/\\\"8baf8dc5-04d8-4ed1-848f-d327b5eac255\\\"\",\r\n
         \           \"type\": \"Microsoft.Network/loadBalancers/frontendIPConfigurations\",\r\n
         \           \"properties\": {\r\n              \"provisioningState\": \"Succeeded\",\r\n
         \             \"privateIPAllocationMethod\": \"Dynamic\",\r\n              \"publicIPAddress\":
@@ -722,16 +720,16 @@ interactions:
         \"IPv4\"\r\n            }\r\n          }\r\n        ],\r\n        \"backendAddressPools\":
         [\r\n          {\r\n            \"name\": \"test-run-command-vmssLBBEPool\",\r\n
         \           \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/backendAddressPools/test-run-command-vmssLBBEPool\",\r\n
-        \           \"etag\": \"W/\\\"cfb8cc63-accf-4eea-a265-891054769232\\\"\",\r\n
+        \           \"etag\": \"W/\\\"8baf8dc5-04d8-4ed1-848f-d327b5eac255\\\"\",\r\n
         \           \"properties\": {\r\n              \"provisioningState\": \"Succeeded\",\r\n
         \             \"backendIPConfigurations\": [\r\n                {\r\n                  \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr694eNic/ipConfigurations/testr694eIPConfig\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr29f5Nic/ipConfigurations/testr29f5IPConfig\"\r\n
         \               }\r\n              ]\r\n            },\r\n            \"type\":
         \"Microsoft.Network/loadBalancers/backendAddressPools\"\r\n          }\r\n
         \       ],\r\n        \"loadBalancingRules\": [],\r\n        \"probes\": [],\r\n
         \       \"inboundNatRules\": [\r\n          {\r\n            \"name\": \"test-run-command-vmssLBNatPool.0\",\r\n
         \           \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatRules/test-run-command-vmssLBNatPool.0\",\r\n
-        \           \"etag\": \"W/\\\"cfb8cc63-accf-4eea-a265-891054769232\\\"\",\r\n
+        \           \"etag\": \"W/\\\"8baf8dc5-04d8-4ed1-848f-d327b5eac255\\\"\",\r\n
         \           \"type\": \"Microsoft.Network/loadBalancers/inboundNatRules\",\r\n
         \           \"properties\": {\r\n              \"provisioningState\": \"Succeeded\",\r\n
         \             \"frontendIPConfiguration\": {\r\n                \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/frontendIPConfigurations/loadBalancerFrontEnd\"\r\n
@@ -740,11 +738,11 @@ interactions:
         4,\r\n              \"protocol\": \"Tcp\",\r\n              \"enableDestinationServiceEndpoint\":
         false,\r\n              \"enableTcpReset\": false,\r\n              \"allowBackendPortConflict\":
         false,\r\n              \"backendIPConfiguration\": {\r\n                \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr694eNic/ipConfigurations/testr694eIPConfig\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr29f5Nic/ipConfigurations/testr29f5IPConfig\"\r\n
         \             }\r\n            }\r\n          }\r\n        ],\r\n        \"inboundNatPools\":
         [\r\n          {\r\n            \"name\": \"test-run-command-vmssLBNatPool\",\r\n
         \           \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatPools/test-run-command-vmssLBNatPool\",\r\n
-        \           \"etag\": \"W/\\\"cfb8cc63-accf-4eea-a265-891054769232\\\"\",\r\n
+        \           \"etag\": \"W/\\\"8baf8dc5-04d8-4ed1-848f-d327b5eac255\\\"\",\r\n
         \           \"properties\": {\r\n              \"provisioningState\": \"Succeeded\",\r\n
         \             \"frontendPortRangeStart\": 50000,\r\n              \"frontendPortRangeEnd\":
         50119,\r\n              \"backendPort\": 22,\r\n              \"protocol\":
@@ -763,7 +761,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:46:57 GMT
+      - Mon, 18 May 2020 12:41:38 GMT
       expires:
       - '-1'
       pragma:
@@ -780,7 +778,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - c1bd45e0-7fa8-468b-a54b-3ec264d5fab8
+      - dc83b76e-f22f-430c-bd63-0877047b9257
     status:
       code: 200
       message: OK
@@ -799,22 +797,22 @@ interactions:
       - -g --name --lb-name --backend-pool-name --frontend-ip-name --backend-port
         --frontend-port --protocol
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-network/7.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/10.2.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB?api-version=2019-09-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB?api-version=2020-04-01
   response:
     body:
       string: "{\r\n  \"name\": \"test-run-command-vmssLB\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB\",\r\n
-        \ \"etag\": \"W/\\\"cfb8cc63-accf-4eea-a265-891054769232\\\"\",\r\n  \"type\":
+        \ \"etag\": \"W/\\\"8baf8dc5-04d8-4ed1-848f-d327b5eac255\\\"\",\r\n  \"type\":
         \"Microsoft.Network/loadBalancers\",\r\n  \"location\": \"westus\",\r\n  \"tags\":
         {},\r\n  \"properties\": {\r\n    \"provisioningState\": \"Succeeded\",\r\n
-        \   \"resourceGuid\": \"0a492d92-0860-4e1a-9aaf-a056229cba95\",\r\n    \"frontendIPConfigurations\":
+        \   \"resourceGuid\": \"715e3c55-20fd-477b-9b3a-729a74274f0a\",\r\n    \"frontendIPConfigurations\":
         [\r\n      {\r\n        \"name\": \"loadBalancerFrontEnd\",\r\n        \"id\":
         \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/frontendIPConfigurations/loadBalancerFrontEnd\",\r\n
-        \       \"etag\": \"W/\\\"cfb8cc63-accf-4eea-a265-891054769232\\\"\",\r\n
+        \       \"etag\": \"W/\\\"8baf8dc5-04d8-4ed1-848f-d327b5eac255\\\"\",\r\n
         \       \"type\": \"Microsoft.Network/loadBalancers/frontendIPConfigurations\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
         \         \"privateIPAllocationMethod\": \"Dynamic\",\r\n          \"publicIPAddress\":
@@ -826,15 +824,15 @@ interactions:
         \           }\r\n          ],\r\n          \"privateIPAddressVersion\": \"IPv4\"\r\n
         \       }\r\n      }\r\n    ],\r\n    \"backendAddressPools\": [\r\n      {\r\n
         \       \"name\": \"test-run-command-vmssLBBEPool\",\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/backendAddressPools/test-run-command-vmssLBBEPool\",\r\n
-        \       \"etag\": \"W/\\\"cfb8cc63-accf-4eea-a265-891054769232\\\"\",\r\n
+        \       \"etag\": \"W/\\\"8baf8dc5-04d8-4ed1-848f-d327b5eac255\\\"\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
         \         \"backendIPConfigurations\": [\r\n            {\r\n              \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr694eNic/ipConfigurations/testr694eIPConfig\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr29f5Nic/ipConfigurations/testr29f5IPConfig\"\r\n
         \           }\r\n          ]\r\n        },\r\n        \"type\": \"Microsoft.Network/loadBalancers/backendAddressPools\"\r\n
         \     }\r\n    ],\r\n    \"loadBalancingRules\": [],\r\n    \"probes\": [],\r\n
         \   \"inboundNatRules\": [\r\n      {\r\n        \"name\": \"test-run-command-vmssLBNatPool.0\",\r\n
         \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatRules/test-run-command-vmssLBNatPool.0\",\r\n
-        \       \"etag\": \"W/\\\"cfb8cc63-accf-4eea-a265-891054769232\\\"\",\r\n
+        \       \"etag\": \"W/\\\"8baf8dc5-04d8-4ed1-848f-d327b5eac255\\\"\",\r\n
         \       \"type\": \"Microsoft.Network/loadBalancers/inboundNatRules\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
         \         \"frontendIPConfiguration\": {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/frontendIPConfigurations/loadBalancerFrontEnd\"\r\n
@@ -842,11 +840,11 @@ interactions:
         22,\r\n          \"enableFloatingIP\": false,\r\n          \"idleTimeoutInMinutes\":
         4,\r\n          \"protocol\": \"Tcp\",\r\n          \"enableDestinationServiceEndpoint\":
         false,\r\n          \"enableTcpReset\": false,\r\n          \"allowBackendPortConflict\":
-        false,\r\n          \"backendIPConfiguration\": {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr694eNic/ipConfigurations/testr694eIPConfig\"\r\n
+        false,\r\n          \"backendIPConfiguration\": {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr29f5Nic/ipConfigurations/testr29f5IPConfig\"\r\n
         \         }\r\n        }\r\n      }\r\n    ],\r\n    \"inboundNatPools\":
         [\r\n      {\r\n        \"name\": \"test-run-command-vmssLBNatPool\",\r\n
         \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatPools/test-run-command-vmssLBNatPool\",\r\n
-        \       \"etag\": \"W/\\\"cfb8cc63-accf-4eea-a265-891054769232\\\"\",\r\n
+        \       \"etag\": \"W/\\\"8baf8dc5-04d8-4ed1-848f-d327b5eac255\\\"\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
         \         \"frontendPortRangeStart\": 50000,\r\n          \"frontendPortRangeEnd\":
         50119,\r\n          \"backendPort\": 22,\r\n          \"protocol\": \"Tcp\",\r\n
@@ -864,9 +862,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:46:59 GMT
+      - Mon, 18 May 2020 12:41:39 GMT
       etag:
-      - W/"cfb8cc63-accf-4eea-a265-891054769232"
+      - W/"8baf8dc5-04d8-4ed1-848f-d327b5eac255"
       expires:
       - '-1'
       pragma:
@@ -883,7 +881,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - b680963d-254b-43fb-b411-0dd4637606c1
+      - aac700dc-75bd-46a8-b399-a99dc489e60b
     status:
       code: 200
       message: OK
@@ -927,22 +925,22 @@ interactions:
       - -g --name --lb-name --backend-pool-name --frontend-ip-name --backend-port
         --frontend-port --protocol
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-network/7.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/10.2.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB?api-version=2019-09-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB?api-version=2020-04-01
   response:
     body:
       string: "{\r\n  \"name\": \"test-run-command-vmssLB\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB\",\r\n
-        \ \"etag\": \"W/\\\"6fe43ba1-8905-4d8d-9ae4-c11fe417f256\\\"\",\r\n  \"type\":
+        \ \"etag\": \"W/\\\"9a162e40-5481-43c9-a59e-6b5b3c46d072\\\"\",\r\n  \"type\":
         \"Microsoft.Network/loadBalancers\",\r\n  \"location\": \"westus\",\r\n  \"tags\":
         {},\r\n  \"properties\": {\r\n    \"provisioningState\": \"Updating\",\r\n
-        \   \"resourceGuid\": \"0a492d92-0860-4e1a-9aaf-a056229cba95\",\r\n    \"frontendIPConfigurations\":
+        \   \"resourceGuid\": \"715e3c55-20fd-477b-9b3a-729a74274f0a\",\r\n    \"frontendIPConfigurations\":
         [\r\n      {\r\n        \"name\": \"loadBalancerFrontEnd\",\r\n        \"id\":
         \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/frontendIPConfigurations/loadBalancerFrontEnd\",\r\n
-        \       \"etag\": \"W/\\\"6fe43ba1-8905-4d8d-9ae4-c11fe417f256\\\"\",\r\n
+        \       \"etag\": \"W/\\\"9a162e40-5481-43c9-a59e-6b5b3c46d072\\\"\",\r\n
         \       \"type\": \"Microsoft.Network/loadBalancers/frontendIPConfigurations\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Updating\",\r\n
         \         \"privateIPAllocationMethod\": \"Dynamic\",\r\n          \"publicIPAddress\":
@@ -956,16 +954,16 @@ interactions:
         \           }\r\n          ],\r\n          \"privateIPAddressVersion\": \"IPv4\"\r\n
         \       }\r\n      }\r\n    ],\r\n    \"backendAddressPools\": [\r\n      {\r\n
         \       \"name\": \"test-run-command-vmssLBBEPool\",\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/backendAddressPools/test-run-command-vmssLBBEPool\",\r\n
-        \       \"etag\": \"W/\\\"6fe43ba1-8905-4d8d-9ae4-c11fe417f256\\\"\",\r\n
+        \       \"etag\": \"W/\\\"9a162e40-5481-43c9-a59e-6b5b3c46d072\\\"\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Updating\",\r\n
         \         \"backendIPConfigurations\": [\r\n            {\r\n              \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr694eNic/ipConfigurations/testr694eIPConfig\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr29f5Nic/ipConfigurations/testr29f5IPConfig\"\r\n
         \           }\r\n          ],\r\n          \"loadBalancingRules\": [\r\n            {\r\n
         \             \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/loadBalancingRules/allowTrafficRule\"\r\n
         \           }\r\n          ]\r\n        },\r\n        \"type\": \"Microsoft.Network/loadBalancers/backendAddressPools\"\r\n
         \     }\r\n    ],\r\n    \"loadBalancingRules\": [\r\n      {\r\n        \"name\":
         \"allowTrafficRule\",\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/loadBalancingRules/allowTrafficRule\",\r\n
-        \       \"etag\": \"W/\\\"6fe43ba1-8905-4d8d-9ae4-c11fe417f256\\\"\",\r\n
+        \       \"etag\": \"W/\\\"9a162e40-5481-43c9-a59e-6b5b3c46d072\\\"\",\r\n
         \       \"type\": \"Microsoft.Network/loadBalancers/loadBalancingRules\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Updating\",\r\n
         \         \"frontendIPConfiguration\": {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/frontendIPConfigurations/loadBalancerFrontEnd\"\r\n
@@ -978,7 +976,7 @@ interactions:
         \         }\r\n        }\r\n      }\r\n    ],\r\n    \"probes\": [],\r\n    \"inboundNatRules\":
         [\r\n      {\r\n        \"name\": \"test-run-command-vmssLBNatPool.0\",\r\n
         \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatRules/test-run-command-vmssLBNatPool.0\",\r\n
-        \       \"etag\": \"W/\\\"6fe43ba1-8905-4d8d-9ae4-c11fe417f256\\\"\",\r\n
+        \       \"etag\": \"W/\\\"9a162e40-5481-43c9-a59e-6b5b3c46d072\\\"\",\r\n
         \       \"type\": \"Microsoft.Network/loadBalancers/inboundNatRules\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Updating\",\r\n
         \         \"frontendIPConfiguration\": {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/frontendIPConfigurations/loadBalancerFrontEnd\"\r\n
@@ -986,11 +984,11 @@ interactions:
         22,\r\n          \"enableFloatingIP\": false,\r\n          \"idleTimeoutInMinutes\":
         4,\r\n          \"protocol\": \"Tcp\",\r\n          \"enableDestinationServiceEndpoint\":
         false,\r\n          \"enableTcpReset\": false,\r\n          \"allowBackendPortConflict\":
-        false,\r\n          \"backendIPConfiguration\": {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr694eNic/ipConfigurations/testr694eIPConfig\"\r\n
+        false,\r\n          \"backendIPConfiguration\": {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr29f5Nic/ipConfigurations/testr29f5IPConfig\"\r\n
         \         }\r\n        }\r\n      }\r\n    ],\r\n    \"inboundNatPools\":
         [\r\n      {\r\n        \"name\": \"test-run-command-vmssLBNatPool\",\r\n
         \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatPools/test-run-command-vmssLBNatPool\",\r\n
-        \       \"etag\": \"W/\\\"6fe43ba1-8905-4d8d-9ae4-c11fe417f256\\\"\",\r\n
+        \       \"etag\": \"W/\\\"9a162e40-5481-43c9-a59e-6b5b3c46d072\\\"\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Updating\",\r\n
         \         \"frontendPortRangeStart\": 50000,\r\n          \"frontendPortRangeEnd\":
         50119,\r\n          \"backendPort\": 22,\r\n          \"protocol\": \"Tcp\",\r\n
@@ -1002,7 +1000,7 @@ interactions:
         \     }\r\n    ]\r\n  },\r\n  \"sku\": {\r\n    \"name\": \"Basic\"\r\n  }\r\n}"
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/11ca1eec-801f-4d30-94ec-ee26fb12bfed?api-version=2019-09-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/b3e39033-d44d-44d9-920e-7a75198544c1?api-version=2020-04-01
       cache-control:
       - no-cache
       content-length:
@@ -1010,7 +1008,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:47:00 GMT
+      - Mon, 18 May 2020 12:41:40 GMT
       expires:
       - '-1'
       pragma:
@@ -1027,9 +1025,9 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - 30abb699-b060-4647-aa21-e1eaf76ac675
+      - 4b52a0d2-abe1-46fb-ab32-d9869c647be6
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1190'
+      - '1197'
     status:
       code: 200
       message: OK
@@ -1048,10 +1046,10 @@ interactions:
       - -g --name --lb-name --backend-pool-name --frontend-ip-name --backend-port
         --frontend-port --protocol
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-network/7.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/10.2.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/11ca1eec-801f-4d30-94ec-ee26fb12bfed?api-version=2019-09-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/b3e39033-d44d-44d9-920e-7a75198544c1?api-version=2020-04-01
   response:
     body:
       string: "{\r\n  \"status\": \"InProgress\"\r\n}"
@@ -1063,7 +1061,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:47:11 GMT
+      - Mon, 18 May 2020 12:41:51 GMT
       expires:
       - '-1'
       pragma:
@@ -1080,7 +1078,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - 300f8839-37cf-429e-9161-590b6ac7ab4d
+      - 6e3bbfa8-3a14-438c-b19b-adcb21a8bcb6
     status:
       code: 200
       message: OK
@@ -1099,10 +1097,10 @@ interactions:
       - -g --name --lb-name --backend-pool-name --frontend-ip-name --backend-port
         --frontend-port --protocol
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-network/7.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/10.2.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/11ca1eec-801f-4d30-94ec-ee26fb12bfed?api-version=2019-09-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/b3e39033-d44d-44d9-920e-7a75198544c1?api-version=2020-04-01
   response:
     body:
       string: "{\r\n  \"status\": \"InProgress\"\r\n}"
@@ -1114,7 +1112,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:47:21 GMT
+      - Mon, 18 May 2020 12:42:01 GMT
       expires:
       - '-1'
       pragma:
@@ -1131,7 +1129,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - a88ac94e-8181-41ed-b826-61cc91570e2c
+      - 0cc5899d-3e84-4c8d-8dc0-fc9c09d809a3
     status:
       code: 200
       message: OK
@@ -1150,10 +1148,61 @@ interactions:
       - -g --name --lb-name --backend-pool-name --frontend-ip-name --backend-port
         --frontend-port --protocol
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-network/7.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/10.2.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/11ca1eec-801f-4d30-94ec-ee26fb12bfed?api-version=2019-09-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/b3e39033-d44d-44d9-920e-7a75198544c1?api-version=2020-04-01
+  response:
+    body:
+      string: "{\r\n  \"status\": \"InProgress\"\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '30'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 18 May 2020 12:42:11 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - 4c4e6826-866f-438e-ab6b-53c4d2fa5894
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network lb rule create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g --name --lb-name --backend-pool-name --frontend-ip-name --backend-port
+        --frontend-port --protocol
+      User-Agent:
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/10.2.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/b3e39033-d44d-44d9-920e-7a75198544c1?api-version=2020-04-01
   response:
     body:
       string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
@@ -1165,7 +1214,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:47:32 GMT
+      - Mon, 18 May 2020 12:42:22 GMT
       expires:
       - '-1'
       pragma:
@@ -1182,7 +1231,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - be479ea7-b8a4-45c1-9e23-006b4df4d570
+      - 2a55df8a-bdfc-4b0d-9136-85f1df059a68
     status:
       code: 200
       message: OK
@@ -1201,20 +1250,20 @@ interactions:
       - -g --name --lb-name --backend-pool-name --frontend-ip-name --backend-port
         --frontend-port --protocol
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-network/7.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/10.2.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB?api-version=2019-09-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB?api-version=2020-04-01
   response:
     body:
       string: "{\r\n  \"name\": \"test-run-command-vmssLB\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB\",\r\n
-        \ \"etag\": \"W/\\\"a7c5f06d-7e4e-463a-93a1-bc7b8739926b\\\"\",\r\n  \"type\":
+        \ \"etag\": \"W/\\\"67e3f921-e047-4951-91d9-f122607aa783\\\"\",\r\n  \"type\":
         \"Microsoft.Network/loadBalancers\",\r\n  \"location\": \"westus\",\r\n  \"tags\":
         {},\r\n  \"properties\": {\r\n    \"provisioningState\": \"Succeeded\",\r\n
-        \   \"resourceGuid\": \"0a492d92-0860-4e1a-9aaf-a056229cba95\",\r\n    \"frontendIPConfigurations\":
+        \   \"resourceGuid\": \"715e3c55-20fd-477b-9b3a-729a74274f0a\",\r\n    \"frontendIPConfigurations\":
         [\r\n      {\r\n        \"name\": \"loadBalancerFrontEnd\",\r\n        \"id\":
         \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/frontendIPConfigurations/loadBalancerFrontEnd\",\r\n
-        \       \"etag\": \"W/\\\"a7c5f06d-7e4e-463a-93a1-bc7b8739926b\\\"\",\r\n
+        \       \"etag\": \"W/\\\"67e3f921-e047-4951-91d9-f122607aa783\\\"\",\r\n
         \       \"type\": \"Microsoft.Network/loadBalancers/frontendIPConfigurations\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
         \         \"privateIPAllocationMethod\": \"Dynamic\",\r\n          \"publicIPAddress\":
@@ -1228,16 +1277,16 @@ interactions:
         \           }\r\n          ],\r\n          \"privateIPAddressVersion\": \"IPv4\"\r\n
         \       }\r\n      }\r\n    ],\r\n    \"backendAddressPools\": [\r\n      {\r\n
         \       \"name\": \"test-run-command-vmssLBBEPool\",\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/backendAddressPools/test-run-command-vmssLBBEPool\",\r\n
-        \       \"etag\": \"W/\\\"a7c5f06d-7e4e-463a-93a1-bc7b8739926b\\\"\",\r\n
+        \       \"etag\": \"W/\\\"67e3f921-e047-4951-91d9-f122607aa783\\\"\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
         \         \"backendIPConfigurations\": [\r\n            {\r\n              \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr694eNic/ipConfigurations/testr694eIPConfig\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr29f5Nic/ipConfigurations/testr29f5IPConfig\"\r\n
         \           }\r\n          ],\r\n          \"loadBalancingRules\": [\r\n            {\r\n
         \             \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/loadBalancingRules/allowTrafficRule\"\r\n
         \           }\r\n          ]\r\n        },\r\n        \"type\": \"Microsoft.Network/loadBalancers/backendAddressPools\"\r\n
         \     }\r\n    ],\r\n    \"loadBalancingRules\": [\r\n      {\r\n        \"name\":
         \"allowTrafficRule\",\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/loadBalancingRules/allowTrafficRule\",\r\n
-        \       \"etag\": \"W/\\\"a7c5f06d-7e4e-463a-93a1-bc7b8739926b\\\"\",\r\n
+        \       \"etag\": \"W/\\\"67e3f921-e047-4951-91d9-f122607aa783\\\"\",\r\n
         \       \"type\": \"Microsoft.Network/loadBalancers/loadBalancingRules\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
         \         \"frontendIPConfiguration\": {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/frontendIPConfigurations/loadBalancerFrontEnd\"\r\n
@@ -1250,7 +1299,7 @@ interactions:
         \         }\r\n        }\r\n      }\r\n    ],\r\n    \"probes\": [],\r\n    \"inboundNatRules\":
         [\r\n      {\r\n        \"name\": \"test-run-command-vmssLBNatPool.0\",\r\n
         \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatRules/test-run-command-vmssLBNatPool.0\",\r\n
-        \       \"etag\": \"W/\\\"a7c5f06d-7e4e-463a-93a1-bc7b8739926b\\\"\",\r\n
+        \       \"etag\": \"W/\\\"67e3f921-e047-4951-91d9-f122607aa783\\\"\",\r\n
         \       \"type\": \"Microsoft.Network/loadBalancers/inboundNatRules\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
         \         \"frontendIPConfiguration\": {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/frontendIPConfigurations/loadBalancerFrontEnd\"\r\n
@@ -1258,11 +1307,11 @@ interactions:
         22,\r\n          \"enableFloatingIP\": false,\r\n          \"idleTimeoutInMinutes\":
         4,\r\n          \"protocol\": \"Tcp\",\r\n          \"enableDestinationServiceEndpoint\":
         false,\r\n          \"enableTcpReset\": false,\r\n          \"allowBackendPortConflict\":
-        false,\r\n          \"backendIPConfiguration\": {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr694eNic/ipConfigurations/testr694eIPConfig\"\r\n
+        false,\r\n          \"backendIPConfiguration\": {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr29f5Nic/ipConfigurations/testr29f5IPConfig\"\r\n
         \         }\r\n        }\r\n      }\r\n    ],\r\n    \"inboundNatPools\":
         [\r\n      {\r\n        \"name\": \"test-run-command-vmssLBNatPool\",\r\n
         \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatPools/test-run-command-vmssLBNatPool\",\r\n
-        \       \"etag\": \"W/\\\"a7c5f06d-7e4e-463a-93a1-bc7b8739926b\\\"\",\r\n
+        \       \"etag\": \"W/\\\"67e3f921-e047-4951-91d9-f122607aa783\\\"\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
         \         \"frontendPortRangeStart\": 50000,\r\n          \"frontendPortRangeEnd\":
         50119,\r\n          \"backendPort\": 22,\r\n          \"protocol\": \"Tcp\",\r\n
@@ -1280,9 +1329,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:47:33 GMT
+      - Mon, 18 May 2020 12:42:22 GMT
       etag:
-      - W/"a7c5f06d-7e4e-463a-93a1-bc7b8739926b"
+      - W/"67e3f921-e047-4951-91d9-f122607aa783"
       expires:
       - '-1'
       pragma:
@@ -1299,7 +1348,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - 4baf4f28-cb64-498f-9033-dd8edd218828
+      - 3bd3e9a9-72e8-4cc6-932d-b3b881d0571d
     status:
       code: 200
       message: OK
@@ -1317,21 +1366,21 @@ interactions:
       ParameterSetName:
       - --ids
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-network/7.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/10.2.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/publicIPAddresses/test-run-command-vmssLBPublicIP?api-version=2019-09-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/publicIPAddresses/test-run-command-vmssLBPublicIP?api-version=2020-04-01
   response:
     body:
       string: "{\r\n  \"name\": \"test-run-command-vmssLBPublicIP\",\r\n  \"id\":
         \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/publicIPAddresses/test-run-command-vmssLBPublicIP\",\r\n
-        \ \"etag\": \"W/\\\"f2e50008-3c06-4aa0-8bda-d710e52faa6b\\\"\",\r\n  \"location\":
+        \ \"etag\": \"W/\\\"e7b8f5be-1640-4ed7-a39b-3f041bf1d1cb\\\"\",\r\n  \"location\":
         \"westus\",\r\n  \"tags\": {},\r\n  \"properties\": {\r\n    \"provisioningState\":
-        \"Succeeded\",\r\n    \"resourceGuid\": \"de7202b9-bea9-4bcb-9818-b8c83046fc2a\",\r\n
-        \   \"ipAddress\": \"104.42.213.231\",\r\n    \"publicIPAddressVersion\":
-        \"IPv4\",\r\n    \"publicIPAllocationMethod\": \"Dynamic\",\r\n    \"idleTimeoutInMinutes\":
+        \"Succeeded\",\r\n    \"resourceGuid\": \"48aaa507-6252-4d7c-b547-50891cf7ea10\",\r\n
+        \   \"ipAddress\": \"40.78.13.0\",\r\n    \"publicIPAddressVersion\": \"IPv4\",\r\n
+        \   \"publicIPAllocationMethod\": \"Dynamic\",\r\n    \"idleTimeoutInMinutes\":
         4,\r\n    \"ipTags\": [],\r\n    \"ipConfiguration\": {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/frontendIPConfigurations/loadBalancerFrontEnd\"\r\n
         \   }\r\n  },\r\n  \"type\": \"Microsoft.Network/publicIPAddresses\",\r\n
         \ \"sku\": {\r\n    \"name\": \"Basic\"\r\n  }\r\n}"
@@ -1339,13 +1388,13 @@ interactions:
       cache-control:
       - no-cache
       content-length:
-      - '1066'
+      - '1062'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:47:33 GMT
+      - Mon, 18 May 2020 12:42:24 GMT
       etag:
-      - W/"f2e50008-3c06-4aa0-8bda-d710e52faa6b"
+      - W/"e7b8f5be-1640-4ed7-a39b-3f041bf1d1cb"
       expires:
       - '-1'
       pragma:
@@ -1362,7 +1411,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - d73729fb-7eb4-44ba-bb0b-af56bbddee97
+      - 9a57361c-8596-4aa0-b7ca-6f1f4d6c5c8f
     status:
       code: 200
       message: OK
@@ -1380,8 +1429,8 @@ interactions:
       ParameterSetName:
       - -n -g --query
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-compute/9.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/12.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
       accept-language:
       - en-US
     method: GET
@@ -1395,37 +1444,37 @@ interactions:
         \"0\",\r\n      \"sku\": {\r\n        \"name\": \"Standard_DS1_v2\",\r\n        \"tier\":
         \"Standard\"\r\n      },\r\n      \"properties\": {\r\n        \"latestModelApplied\":
         true,\r\n        \"modelDefinitionApplied\": \"VirtualMachineScaleSet\",\r\n
-        \       \"networkProfileConfiguration\": {\"networkInterfaceConfigurations\":[{\"name\":\"testr694eNic\",\"properties\":{\"primary\":true,\"enableAcceleratedNetworking\":false,\"dnsSettings\":{\"dnsServers\":[]},\"enableIPForwarding\":false,\"ipConfigurations\":[{\"name\":\"testr694eIPConfig\",\"properties\":{\"subnet\":{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET/subnets/test-run-command-vmssSubnet\"},\"privateIPAddressVersion\":\"IPv4\",\"loadBalancerBackendAddressPools\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/backendAddressPools/test-run-command-vmssLBBEPool\"}],\"loadBalancerInboundNatPools\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatPools/test-run-command-vmssLBNatPool\"}]}}]}}]},\r\n
-        \       \"vmId\": \"6740e057-4b3e-460e-9c65-ae1d73ee7944\",\r\n        \"hardwareProfile\":
+        \       \"networkProfileConfiguration\": {\"networkInterfaceConfigurations\":[{\"name\":\"testr29f5Nic\",\"properties\":{\"primary\":true,\"enableAcceleratedNetworking\":false,\"dnsSettings\":{\"dnsServers\":[]},\"enableIPForwarding\":false,\"ipConfigurations\":[{\"name\":\"testr29f5IPConfig\",\"properties\":{\"subnet\":{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/virtualNetworks/test-run-command-vmssVNET/subnets/test-run-command-vmssSubnet\"},\"privateIPAddressVersion\":\"IPv4\",\"loadBalancerBackendAddressPools\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/backendAddressPools/test-run-command-vmssLBBEPool\"}],\"loadBalancerInboundNatPools\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Network/loadBalancers/test-run-command-vmssLB/inboundNatPools/test-run-command-vmssLBNatPool\"}]}}]}}]},\r\n
+        \       \"vmId\": \"1f564e2b-cc18-464d-9acf-5cd74cb88092\",\r\n        \"hardwareProfile\":
         {},\r\n        \"storageProfile\": {\r\n          \"imageReference\": {\r\n
         \           \"publisher\": \"Canonical\",\r\n            \"offer\": \"UbuntuServer\",\r\n
         \           \"sku\": \"18.04-LTS\",\r\n            \"version\": \"latest\",\r\n
-        \           \"exactVersion\": \"18.04.201910210\"\r\n          },\r\n          \"osDisk\":
-        {\r\n            \"osType\": \"Linux\",\r\n            \"name\": \"test-run-command-vmstest-run-command-vmssOS__1_287596627e21460790cf35cb3e33ce75\",\r\n
+        \           \"exactVersion\": \"18.04.202004290\"\r\n          },\r\n          \"osDisk\":
+        {\r\n            \"osType\": \"Linux\",\r\n            \"name\": \"test-run-command-vmstest-run-command-vmssOS__1_ff7c99ab244c4154801c64e462dea943\",\r\n
         \           \"createOption\": \"FromImage\",\r\n            \"caching\": \"ReadWrite\",\r\n
         \           \"managedDisk\": {\r\n              \"storageAccountType\": \"Premium_LRS\",\r\n
-        \             \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/disks/test-run-command-vmstest-run-command-vmssOS__1_287596627e21460790cf35cb3e33ce75\"\r\n
+        \             \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/CLI_TEST_VMSS_RUN_COMMANDJVQU4QY22RSUPCGJGC7HMCPHX32HTAEC3XFRQL2ZPVREMLDLCA/providers/Microsoft.Compute/disks/test-run-command-vmstest-run-command-vmssOS__1_ff7c99ab244c4154801c64e462dea943\"\r\n
         \           },\r\n            \"diskSizeGB\": 30\r\n          },\r\n          \"dataDisks\":
         []\r\n        },\r\n        \"osProfile\": {\r\n          \"computerName\":
-        \"testr694e000000\",\r\n          \"adminUsername\": \"clitest1\",\r\n          \"linuxConfiguration\":
+        \"testr29f5000000\",\r\n          \"adminUsername\": \"clitest1\",\r\n          \"linuxConfiguration\":
         {\r\n            \"disablePasswordAuthentication\": true,\r\n            \"ssh\":
         {\r\n              \"publicKeys\": [\r\n                {\r\n                  \"path\":
         \"/home/clitest1/.ssh/authorized_keys\",\r\n                  \"keyData\":
-        \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDmzXeK++L20uMK/Ug5wpjnWWyMlHoecEOxyHueHc1gPDj8qgLChiHt1OWJ1sDjiqBJ+hEEwZLjN8lCmUvWzzrl20d7M/BVp1ejulE/zr999kWuY3m5+FpAkbbxeO9LWoafwOir9dPzIOjDGdPWKbgHr3SerOHAuvVdXJDhWHtW5lB/MEnrxi48Pz/8k1lD1YccUAI6zDgKVJPBEk9fWMW8H0hKYsRXmlxdtg2npBQK7kbmcB2NJPEhTVgxVPqSaBVAt2lOCC/QQvAXcoD0lJGujp1IVYqSUarS5RnrYEDZ9Q6EKduWrP0GFkFkF8YzpFe+BRFaV8bLJrvZN43vgzRj
-        fey@DESKTOP-ARGPJS4\\n\"\r\n                }\r\n              ]\r\n            },\r\n
+        \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC/6lyAsWCEt5FlwlP4E2dBLTrJlQ8F8eM7P+N60KN/G59ytk5e1hUZ9BsCLOQ+Ebh9Fq/ck2k2AbOPhTk+PcUOMDSTkxPIXcA/zUtfKOV9VHf4urkVFy+4mN9+xcs7NlAbyj0ZImvy3SIsdlL4dO3FWJ81QtRUOgdYQq5cBXi0eExClt0Hfjq4T4FqU0GKhjOnaO/MLZ7gf0UfWdqmYqUWOE5EZKdml1PG/LeYG5y7oXQ1uCz9wwsa8DO3PzUSzCw8RK1/6MJQIyBbytz2LzXSidHj8tHFkxt9Flhh+CeeoDTJYm13Jvic9DxrqFY3Px7+9Bt6D0exV+USneFGB2LRJk2Bm6Nz6/FYlyXUAgZbZx2w3ZSXhaiNoW7UfD4GJ5E9O3F2T0atN/IgW2IHp1wNdr8AAT18YqkN69iBSL1Rx9eel/V6YYjhG7F6dTHCsJUB1qQWoCEaWwiRw57fsrO2XRzF79QK96Oz4VkLZvJj/PhR4ez+/tsjIT5TKWKGHstQ4VNvvuUhbYt+SI3aLxg8EuEgmvfaJ3k77+ceb7Sy3WsWHyRDgmypHe1ncYqFMONTwGcPO5snIH40C34eD5hy3t3myX8WVpDwcBrn44cqQ722Q6u6z/qEpC4sDsYCH9fp+7/PMGQWwwgdqf7Leqe4IKxIL+OxoXxUswat/6wzpQ==
+        fanqiu@microsoft.com\\n\"\r\n                }\r\n              ]\r\n            },\r\n
         \           \"provisionVMAgent\": true\r\n          },\r\n          \"secrets\":
         [],\r\n          \"allowExtensionOperations\": true,\r\n          \"requireGuestProvisionSignal\":
-        true\r\n        },\r\n        \"networkProfile\": {\"networkInterfaces\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr694eNic\"}]},\r\n
+        true\r\n        },\r\n        \"networkProfile\": {\"networkInterfaces\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vmss_run_command000001/providers/Microsoft.Compute/virtualMachineScaleSets/test-run-command-vmss/virtualMachines/0/networkInterfaces/testr29f5Nic\"}]},\r\n
         \       \"provisioningState\": \"Succeeded\"\r\n      }\r\n    }\r\n  ]\r\n}"
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '4319'
+      - '4664'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:47:34 GMT
+      - Mon, 18 May 2020 12:42:25 GMT
       expires:
       - '-1'
       pragma:
@@ -1442,7 +1491,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/HighCostGetVMScaleSet3Min;177,Microsoft.Compute/HighCostGetVMScaleSet30Min;885,Microsoft.Compute/VMScaleSetVMViews3Min;4990
+      - Microsoft.Compute/HighCostGetVMScaleSet3Min;178,Microsoft.Compute/HighCostGetVMScaleSet30Min;896,Microsoft.Compute/VMScaleSetVMViews3Min;4998
       x-ms-request-charge:
       - '1'
     status:
@@ -1467,8 +1516,8 @@ interactions:
       ParameterSetName:
       - --ids --command-id --script
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-compute/9.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/12.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
       accept-language:
       - en-US
     method: POST
@@ -1478,17 +1527,17 @@ interactions:
       string: ''
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/20ad5b04-6ac0-44bd-95ce-95cb781571f9?api-version=2019-07-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/36048ddc-1c0d-45bd-9522-2d1e96d6fb42?api-version=2019-07-01
       cache-control:
       - no-cache
       content-length:
       - '0'
       date:
-      - Fri, 01 Nov 2019 08:47:36 GMT
+      - Mon, 18 May 2020 12:42:26 GMT
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/20ad5b04-6ac0-44bd-95ce-95cb781571f9?monitor=true&api-version=2019-07-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/36048ddc-1c0d-45bd-9522-2d1e96d6fb42?monitor=true&api-version=2019-07-01
       pragma:
       - no-cache
       server:
@@ -1499,9 +1548,9 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/VMScaleSetActions3Min;237,Microsoft.Compute/VMScaleSetActions30Min;1189,Microsoft.Compute/VMScaleSetBatchedVMRequests5Min;1158,Microsoft.Compute/VmssQueuedVMOperations;4799
+      - Microsoft.Compute/VMScaleSetActions3Min;239,Microsoft.Compute/VMScaleSetActions30Min;1199,Microsoft.Compute/VMScaleSetBatchedVMRequests5Min;1194,Microsoft.Compute/VmssQueuedVMOperations;4799
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1198'
+      - '1199'
       x-ms-request-charge:
       - '1'
     status:
@@ -1521,14 +1570,14 @@ interactions:
       ParameterSetName:
       - --ids --command-id --script
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-compute/9.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/12.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/20ad5b04-6ac0-44bd-95ce-95cb781571f9?api-version=2019-07-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/36048ddc-1c0d-45bd-9522-2d1e96d6fb42?api-version=2019-07-01
   response:
     body:
-      string: "{\r\n  \"startTime\": \"2019-11-01T08:47:36.7880772+00:00\",\r\n  \"status\":
-        \"InProgress\",\r\n  \"name\": \"20ad5b04-6ac0-44bd-95ce-95cb781571f9\"\r\n}"
+      string: "{\r\n  \"startTime\": \"2020-05-18T12:42:26.7097646+00:00\",\r\n  \"status\":
+        \"InProgress\",\r\n  \"name\": \"36048ddc-1c0d-45bd-9522-2d1e96d6fb42\"\r\n}"
     headers:
       cache-control:
       - no-cache
@@ -1537,7 +1586,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:48:07 GMT
+      - Mon, 18 May 2020 12:42:57 GMT
       expires:
       - '-1'
       pragma:
@@ -1554,7 +1603,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/GetOperation3Min;14959,Microsoft.Compute/GetOperation30Min;29675
+      - Microsoft.Compute/GetOperation3Min;14990,Microsoft.Compute/GetOperation30Min;29979
     status:
       code: 200
       message: OK
@@ -1572,17 +1621,18 @@ interactions:
       ParameterSetName:
       - --ids --command-id --script
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-compute/9.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/12.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/20ad5b04-6ac0-44bd-95ce-95cb781571f9?api-version=2019-07-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/36048ddc-1c0d-45bd-9522-2d1e96d6fb42?api-version=2019-07-01
   response:
     body:
-      string: "{\r\n  \"startTime\": \"2019-11-01T08:47:36.7880772+00:00\",\r\n  \"endTime\":
-        \"2019-11-01T08:48:13.4332102+00:00\",\r\n  \"status\": \"Succeeded\",\r\n
-        \ \"properties\": {\r\n    \"output\": {\"value\":[{\"code\":\"ProvisioningState/succeeded\",\"level\":\"Info\",\"displayStatus\":\"Provisioning
-        succeeded\",\"message\":\"Enable succeeded: \\n[stdout]\\n4 (2.12.6-0ubuntu2)
-        ...\\r\\nSelecting previously unselected package libjpeg8:amd64.\\r\\nPreparing
+      string: "{\r\n  \"startTime\": \"2020-05-18T12:42:26.7097646+00:00\",\r\n  \"endTime\":
+        \"2020-05-18T12:43:23.1629479+00:00\",\r\n  \"status\": \"Succeeded\",\r\n
+        \ \"properties\": {\r\n    \"output\": {\r\n  \"value\": [\r\n    {\r\n      \"code\":
+        \"ProvisioningState/succeeded\",\r\n      \"level\": \"Info\",\r\n      \"displayStatus\":
+        \"Provisioning succeeded\",\r\n      \"message\": \"Enable succeeded: \\n[stdout]\\n4
+        (2.12.6-0ubuntu2) ...\\r\\nSelecting previously unselected package libjpeg8:amd64.\\r\\nPreparing
         to unpack .../04-libjpeg8_8c-2ubuntu8_amd64.deb ...\\r\\nUnpacking libjpeg8:amd64
         (8c-2ubuntu8) ...\\r\\nSelecting previously unselected package libjbig0:amd64.\\r\\nPreparing
         to unpack .../05-libjbig0_2.1-3.1build1_amd64.deb ...\\r\\nUnpacking libjbig0:amd64
@@ -1593,43 +1643,43 @@ interactions:
         (0.6.1-2) ...\\r\\nSelecting previously unselected package libxpm4:amd64.\\r\\nPreparing
         to unpack .../08-libxpm4_1%3a3.5.12-1_amd64.deb ...\\r\\nUnpacking libxpm4:amd64
         (1:3.5.12-1) ...\\r\\nSelecting previously unselected package libgd3:amd64.\\r\\nPreparing
-        to unpack .../09-libgd3_2.2.5-4ubuntu0.3_amd64.deb ...\\r\\nUnpacking libgd3:amd64
-        (2.2.5-4ubuntu0.3) ...\\r\\nSelecting previously unselected package nginx-common.\\r\\nPreparing
-        to unpack .../10-nginx-common_1.14.0-0ubuntu1.6_all.deb ...\\r\\nUnpacking
-        nginx-common (1.14.0-0ubuntu1.6) ...\\r\\nSelecting previously unselected
-        package libnginx-mod-http-geoip.\\r\\nPreparing to unpack .../11-libnginx-mod-http-geoip_1.14.0-0ubuntu1.6_amd64.deb
-        ...\\r\\nUnpacking libnginx-mod-http-geoip (1.14.0-0ubuntu1.6) ...\\r\\nSelecting
+        to unpack .../09-libgd3_2.2.5-4ubuntu0.4_amd64.deb ...\\r\\nUnpacking libgd3:amd64
+        (2.2.5-4ubuntu0.4) ...\\r\\nSelecting previously unselected package nginx-common.\\r\\nPreparing
+        to unpack .../10-nginx-common_1.14.0-0ubuntu1.7_all.deb ...\\r\\nUnpacking
+        nginx-common (1.14.0-0ubuntu1.7) ...\\r\\nSelecting previously unselected
+        package libnginx-mod-http-geoip.\\r\\nPreparing to unpack .../11-libnginx-mod-http-geoip_1.14.0-0ubuntu1.7_amd64.deb
+        ...\\r\\nUnpacking libnginx-mod-http-geoip (1.14.0-0ubuntu1.7) ...\\r\\nSelecting
         previously unselected package libnginx-mod-http-image-filter.\\r\\nPreparing
-        to unpack .../12-libnginx-mod-http-image-filter_1.14.0-0ubuntu1.6_amd64.deb
-        ...\\r\\nUnpacking libnginx-mod-http-image-filter (1.14.0-0ubuntu1.6) ...\\r\\nSelecting
+        to unpack .../12-libnginx-mod-http-image-filter_1.14.0-0ubuntu1.7_amd64.deb
+        ...\\r\\nUnpacking libnginx-mod-http-image-filter (1.14.0-0ubuntu1.7) ...\\r\\nSelecting
         previously unselected package libnginx-mod-http-xslt-filter.\\r\\nPreparing
-        to unpack .../13-libnginx-mod-http-xslt-filter_1.14.0-0ubuntu1.6_amd64.deb
-        ...\\r\\nUnpacking libnginx-mod-http-xslt-filter (1.14.0-0ubuntu1.6) ...\\r\\nSelecting
+        to unpack .../13-libnginx-mod-http-xslt-filter_1.14.0-0ubuntu1.7_amd64.deb
+        ...\\r\\nUnpacking libnginx-mod-http-xslt-filter (1.14.0-0ubuntu1.7) ...\\r\\nSelecting
         previously unselected package libnginx-mod-mail.\\r\\nPreparing to unpack
-        .../14-libnginx-mod-mail_1.14.0-0ubuntu1.6_amd64.deb ...\\r\\nUnpacking libnginx-mod-mail
-        (1.14.0-0ubuntu1.6) ...\\r\\nSelecting previously unselected package libnginx-mod-stream.\\r\\nPreparing
-        to unpack .../15-libnginx-mod-stream_1.14.0-0ubuntu1.6_amd64.deb ...\\r\\nUnpacking
-        libnginx-mod-stream (1.14.0-0ubuntu1.6) ...\\r\\nSelecting previously unselected
-        package nginx-core.\\r\\nPreparing to unpack .../16-nginx-core_1.14.0-0ubuntu1.6_amd64.deb
-        ...\\r\\nUnpacking nginx-core (1.14.0-0ubuntu1.6) ...\\r\\nSelecting previously
-        unselected package nginx.\\r\\nPreparing to unpack .../17-nginx_1.14.0-0ubuntu1.6_all.deb
-        ...\\r\\nUnpacking nginx (1.14.0-0ubuntu1.6) ...\\r\\nSetting up libjbig0:amd64
+        .../14-libnginx-mod-mail_1.14.0-0ubuntu1.7_amd64.deb ...\\r\\nUnpacking libnginx-mod-mail
+        (1.14.0-0ubuntu1.7) ...\\r\\nSelecting previously unselected package libnginx-mod-stream.\\r\\nPreparing
+        to unpack .../15-libnginx-mod-stream_1.14.0-0ubuntu1.7_amd64.deb ...\\r\\nUnpacking
+        libnginx-mod-stream (1.14.0-0ubuntu1.7) ...\\r\\nSelecting previously unselected
+        package nginx-core.\\r\\nPreparing to unpack .../16-nginx-core_1.14.0-0ubuntu1.7_amd64.deb
+        ...\\r\\nUnpacking nginx-core (1.14.0-0ubuntu1.7) ...\\r\\nSelecting previously
+        unselected package nginx.\\r\\nPreparing to unpack .../17-nginx_1.14.0-0ubuntu1.7_all.deb
+        ...\\r\\nUnpacking nginx (1.14.0-0ubuntu1.7) ...\\r\\nSetting up libjbig0:amd64
         (2.1-3.1build1) ...\\r\\nSetting up fonts-dejavu-core (2.37-1) ...\\r\\nSetting
-        up nginx-common (1.14.0-0ubuntu1.6) ...\\r\\ndebconf: unable to initialize
+        up nginx-common (1.14.0-0ubuntu1.7) ...\\r\\ndebconf: unable to initialize
         frontend: Dialog\\r\\ndebconf: (Dialog frontend will not work on a dumb terminal,
         an emacs shell buffer, or without a controlling terminal.)\\r\\ndebconf: falling
         back to frontend: Readline\\r\\nCreated symlink /etc/systemd/system/multi-user.target.wants/nginx.service
         \u2192 /lib/systemd/system/nginx.service.\\r\\nSetting up libjpeg-turbo8:amd64
-        (1.5.2-0ubuntu5.18.04.1) ...\\r\\nSetting up libnginx-mod-mail (1.14.0-0ubuntu1.6)
+        (1.5.2-0ubuntu5.18.04.3) ...\\r\\nSetting up libnginx-mod-mail (1.14.0-0ubuntu1.7)
         ...\\r\\nSetting up libxpm4:amd64 (1:3.5.12-1) ...\\r\\nSetting up libnginx-mod-http-xslt-filter
-        (1.14.0-0ubuntu1.6) ...\\r\\nSetting up libnginx-mod-http-geoip (1.14.0-0ubuntu1.6)
+        (1.14.0-0ubuntu1.7) ...\\r\\nSetting up libnginx-mod-http-geoip (1.14.0-0ubuntu1.7)
         ...\\r\\nSetting up libwebp6:amd64 (0.6.1-2) ...\\r\\nSetting up libjpeg8:amd64
         (8c-2ubuntu8) ...\\r\\nSetting up fontconfig-config (2.12.6-0ubuntu2) ...\\r\\nSetting
-        up libnginx-mod-stream (1.14.0-0ubuntu1.6) ...\\r\\nSetting up libtiff5:amd64
+        up libnginx-mod-stream (1.14.0-0ubuntu1.7) ...\\r\\nSetting up libtiff5:amd64
         (4.0.9-5ubuntu0.3) ...\\r\\nSetting up libfontconfig1:amd64 (2.12.6-0ubuntu2)
-        ...\\r\\nSetting up libgd3:amd64 (2.2.5-4ubuntu0.3) ...\\r\\nSetting up libnginx-mod-http-image-filter
-        (1.14.0-0ubuntu1.6) ...\\r\\nSetting up nginx-core (1.14.0-0ubuntu1.6) ...\\r\\nSetting
-        up nginx (1.14.0-0ubuntu1.6) ...\\r\\nProcessing triggers for systemd (237-3ubuntu10.31)
+        ...\\r\\nSetting up libgd3:amd64 (2.2.5-4ubuntu0.4) ...\\r\\nSetting up libnginx-mod-http-image-filter
+        (1.14.0-0ubuntu1.7) ...\\r\\nSetting up nginx-core (1.14.0-0ubuntu1.7) ...\\r\\nSetting
+        up nginx (1.14.0-0ubuntu1.7) ...\\r\\nProcessing triggers for systemd (237-3ubuntu10.39)
         ...\\r\\nProcessing triggers for man-db (2.8.3-2ubuntu0.1) ...\\r\\nProcessing
         triggers for ufw (0.36-0ubuntu0.18.04.1) ...\\r\\nProcessing triggers for
         ureadahead (0.100.0-21) ...\\r\\nProcessing triggers for libc-bin (2.27-3ubuntu1)
@@ -1638,16 +1688,17 @@ interactions:
         or without a controlling terminal.)\\ndebconf: falling back to frontend: Readline\\ndebconf:
         unable to initialize frontend: Readline\\ndebconf: (This frontend requires
         a controlling tty.)\\ndebconf: falling back to frontend: Teletype\\ndpkg-preconfigure:
-        unable to re-open stdin: \\n\"}]}\r\n  },\r\n  \"name\": \"20ad5b04-6ac0-44bd-95ce-95cb781571f9\"\r\n}"
+        unable to re-open stdin: \\n\"\r\n    }\r\n  ]\r\n}\r\n  },\r\n  \"name\":
+        \"36048ddc-1c0d-45bd-9522-2d1e96d6fb42\"\r\n}"
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '5030'
+      - '5089'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:48:38 GMT
+      - Mon, 18 May 2020 12:43:27 GMT
       expires:
       - '-1'
       pragma:
@@ -1664,7 +1715,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/GetOperation3Min;14958,Microsoft.Compute/GetOperation30Min;29668
+      - Microsoft.Compute/GetOperation3Min;14986,Microsoft.Compute/GetOperation30Min;29975
     status:
       code: 200
       message: OK
@@ -1682,10 +1733,10 @@ interactions:
       ParameterSetName:
       - --ids --command-id --script
       User-Agent:
-      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.10 msrest_azure/0.6.2
-        azure-mgmt-compute/9.0.0 Azure-SDK-For-Python AZURECLI/2.0.75
+      - python/3.7.4 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/12.0.0
+        Azure-SDK-For-Python AZURECLI/2.5.1
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/20ad5b04-6ac0-44bd-95ce-95cb781571f9?monitor=true&api-version=2019-07-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/36048ddc-1c0d-45bd-9522-2d1e96d6fb42?monitor=true&api-version=2019-07-01
   response:
     body:
       string: "{\"value\":[{\"code\":\"ProvisioningState/succeeded\",\"level\":\"Info\",\"displayStatus\":\"Provisioning
@@ -1701,43 +1752,43 @@ interactions:
         (0.6.1-2) ...\\r\\nSelecting previously unselected package libxpm4:amd64.\\r\\nPreparing
         to unpack .../08-libxpm4_1%3a3.5.12-1_amd64.deb ...\\r\\nUnpacking libxpm4:amd64
         (1:3.5.12-1) ...\\r\\nSelecting previously unselected package libgd3:amd64.\\r\\nPreparing
-        to unpack .../09-libgd3_2.2.5-4ubuntu0.3_amd64.deb ...\\r\\nUnpacking libgd3:amd64
-        (2.2.5-4ubuntu0.3) ...\\r\\nSelecting previously unselected package nginx-common.\\r\\nPreparing
-        to unpack .../10-nginx-common_1.14.0-0ubuntu1.6_all.deb ...\\r\\nUnpacking
-        nginx-common (1.14.0-0ubuntu1.6) ...\\r\\nSelecting previously unselected
-        package libnginx-mod-http-geoip.\\r\\nPreparing to unpack .../11-libnginx-mod-http-geoip_1.14.0-0ubuntu1.6_amd64.deb
-        ...\\r\\nUnpacking libnginx-mod-http-geoip (1.14.0-0ubuntu1.6) ...\\r\\nSelecting
+        to unpack .../09-libgd3_2.2.5-4ubuntu0.4_amd64.deb ...\\r\\nUnpacking libgd3:amd64
+        (2.2.5-4ubuntu0.4) ...\\r\\nSelecting previously unselected package nginx-common.\\r\\nPreparing
+        to unpack .../10-nginx-common_1.14.0-0ubuntu1.7_all.deb ...\\r\\nUnpacking
+        nginx-common (1.14.0-0ubuntu1.7) ...\\r\\nSelecting previously unselected
+        package libnginx-mod-http-geoip.\\r\\nPreparing to unpack .../11-libnginx-mod-http-geoip_1.14.0-0ubuntu1.7_amd64.deb
+        ...\\r\\nUnpacking libnginx-mod-http-geoip (1.14.0-0ubuntu1.7) ...\\r\\nSelecting
         previously unselected package libnginx-mod-http-image-filter.\\r\\nPreparing
-        to unpack .../12-libnginx-mod-http-image-filter_1.14.0-0ubuntu1.6_amd64.deb
-        ...\\r\\nUnpacking libnginx-mod-http-image-filter (1.14.0-0ubuntu1.6) ...\\r\\nSelecting
+        to unpack .../12-libnginx-mod-http-image-filter_1.14.0-0ubuntu1.7_amd64.deb
+        ...\\r\\nUnpacking libnginx-mod-http-image-filter (1.14.0-0ubuntu1.7) ...\\r\\nSelecting
         previously unselected package libnginx-mod-http-xslt-filter.\\r\\nPreparing
-        to unpack .../13-libnginx-mod-http-xslt-filter_1.14.0-0ubuntu1.6_amd64.deb
-        ...\\r\\nUnpacking libnginx-mod-http-xslt-filter (1.14.0-0ubuntu1.6) ...\\r\\nSelecting
+        to unpack .../13-libnginx-mod-http-xslt-filter_1.14.0-0ubuntu1.7_amd64.deb
+        ...\\r\\nUnpacking libnginx-mod-http-xslt-filter (1.14.0-0ubuntu1.7) ...\\r\\nSelecting
         previously unselected package libnginx-mod-mail.\\r\\nPreparing to unpack
-        .../14-libnginx-mod-mail_1.14.0-0ubuntu1.6_amd64.deb ...\\r\\nUnpacking libnginx-mod-mail
-        (1.14.0-0ubuntu1.6) ...\\r\\nSelecting previously unselected package libnginx-mod-stream.\\r\\nPreparing
-        to unpack .../15-libnginx-mod-stream_1.14.0-0ubuntu1.6_amd64.deb ...\\r\\nUnpacking
-        libnginx-mod-stream (1.14.0-0ubuntu1.6) ...\\r\\nSelecting previously unselected
-        package nginx-core.\\r\\nPreparing to unpack .../16-nginx-core_1.14.0-0ubuntu1.6_amd64.deb
-        ...\\r\\nUnpacking nginx-core (1.14.0-0ubuntu1.6) ...\\r\\nSelecting previously
-        unselected package nginx.\\r\\nPreparing to unpack .../17-nginx_1.14.0-0ubuntu1.6_all.deb
-        ...\\r\\nUnpacking nginx (1.14.0-0ubuntu1.6) ...\\r\\nSetting up libjbig0:amd64
+        .../14-libnginx-mod-mail_1.14.0-0ubuntu1.7_amd64.deb ...\\r\\nUnpacking libnginx-mod-mail
+        (1.14.0-0ubuntu1.7) ...\\r\\nSelecting previously unselected package libnginx-mod-stream.\\r\\nPreparing
+        to unpack .../15-libnginx-mod-stream_1.14.0-0ubuntu1.7_amd64.deb ...\\r\\nUnpacking
+        libnginx-mod-stream (1.14.0-0ubuntu1.7) ...\\r\\nSelecting previously unselected
+        package nginx-core.\\r\\nPreparing to unpack .../16-nginx-core_1.14.0-0ubuntu1.7_amd64.deb
+        ...\\r\\nUnpacking nginx-core (1.14.0-0ubuntu1.7) ...\\r\\nSelecting previously
+        unselected package nginx.\\r\\nPreparing to unpack .../17-nginx_1.14.0-0ubuntu1.7_all.deb
+        ...\\r\\nUnpacking nginx (1.14.0-0ubuntu1.7) ...\\r\\nSetting up libjbig0:amd64
         (2.1-3.1build1) ...\\r\\nSetting up fonts-dejavu-core (2.37-1) ...\\r\\nSetting
-        up nginx-common (1.14.0-0ubuntu1.6) ...\\r\\ndebconf: unable to initialize
+        up nginx-common (1.14.0-0ubuntu1.7) ...\\r\\ndebconf: unable to initialize
         frontend: Dialog\\r\\ndebconf: (Dialog frontend will not work on a dumb terminal,
         an emacs shell buffer, or without a controlling terminal.)\\r\\ndebconf: falling
         back to frontend: Readline\\r\\nCreated symlink /etc/systemd/system/multi-user.target.wants/nginx.service
         \u2192 /lib/systemd/system/nginx.service.\\r\\nSetting up libjpeg-turbo8:amd64
-        (1.5.2-0ubuntu5.18.04.1) ...\\r\\nSetting up libnginx-mod-mail (1.14.0-0ubuntu1.6)
+        (1.5.2-0ubuntu5.18.04.3) ...\\r\\nSetting up libnginx-mod-mail (1.14.0-0ubuntu1.7)
         ...\\r\\nSetting up libxpm4:amd64 (1:3.5.12-1) ...\\r\\nSetting up libnginx-mod-http-xslt-filter
-        (1.14.0-0ubuntu1.6) ...\\r\\nSetting up libnginx-mod-http-geoip (1.14.0-0ubuntu1.6)
+        (1.14.0-0ubuntu1.7) ...\\r\\nSetting up libnginx-mod-http-geoip (1.14.0-0ubuntu1.7)
         ...\\r\\nSetting up libwebp6:amd64 (0.6.1-2) ...\\r\\nSetting up libjpeg8:amd64
         (8c-2ubuntu8) ...\\r\\nSetting up fontconfig-config (2.12.6-0ubuntu2) ...\\r\\nSetting
-        up libnginx-mod-stream (1.14.0-0ubuntu1.6) ...\\r\\nSetting up libtiff5:amd64
+        up libnginx-mod-stream (1.14.0-0ubuntu1.7) ...\\r\\nSetting up libtiff5:amd64
         (4.0.9-5ubuntu0.3) ...\\r\\nSetting up libfontconfig1:amd64 (2.12.6-0ubuntu2)
-        ...\\r\\nSetting up libgd3:amd64 (2.2.5-4ubuntu0.3) ...\\r\\nSetting up libnginx-mod-http-image-filter
-        (1.14.0-0ubuntu1.6) ...\\r\\nSetting up nginx-core (1.14.0-0ubuntu1.6) ...\\r\\nSetting
-        up nginx (1.14.0-0ubuntu1.6) ...\\r\\nProcessing triggers for systemd (237-3ubuntu10.31)
+        ...\\r\\nSetting up libgd3:amd64 (2.2.5-4ubuntu0.4) ...\\r\\nSetting up libnginx-mod-http-image-filter
+        (1.14.0-0ubuntu1.7) ...\\r\\nSetting up nginx-core (1.14.0-0ubuntu1.7) ...\\r\\nSetting
+        up nginx (1.14.0-0ubuntu1.7) ...\\r\\nProcessing triggers for systemd (237-3ubuntu10.39)
         ...\\r\\nProcessing triggers for man-db (2.8.3-2ubuntu0.1) ...\\r\\nProcessing
         triggers for ufw (0.36-0ubuntu0.18.04.1) ...\\r\\nProcessing triggers for
         ureadahead (0.100.0-21) ...\\r\\nProcessing triggers for libc-bin (2.27-3ubuntu1)
@@ -1755,7 +1806,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 01 Nov 2019 08:48:38 GMT
+      - Mon, 18 May 2020 12:43:27 GMT
       expires:
       - '-1'
       pragma:
@@ -1772,7 +1823,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/GetOperation3Min;14957,Microsoft.Compute/GetOperation30Min;29667
+      - Microsoft.Compute/GetOperation3Min;14985,Microsoft.Compute/GetOperation30Min;29974
     status:
       code: 200
       message: OK
@@ -1788,7 +1839,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: GET
-    uri: http://104.42.213.231/
+    uri: http://40.78.13.0/
   response:
     body:
       string: "<!DOCTYPE html>\n<html>\n<head>\n<title>Welcome to nginx!</title>\n<style>\n
@@ -1807,11 +1858,11 @@ interactions:
       content-type:
       - text/html
       date:
-      - Fri, 01 Nov 2019 08:48:55 GMT
+      - Mon, 18 May 2020 12:43:44 GMT
       etag:
-      - W/"5dbbf142-264"
+      - W/"5ec282df-264"
       last-modified:
-      - Fri, 01 Nov 2019 08:48:02 GMT
+      - Mon, 18 May 2020 12:43:11 GMT
       server:
       - nginx/1.14.0 (Ubuntu)
       transfer-encoding:

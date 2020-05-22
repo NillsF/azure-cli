@@ -326,6 +326,16 @@ short-summary: Import an SSL certificate to a function app from Key Vault.
 examples:
   - name: Import an SSL certificate to a function app from Key Vault.
     text: az functionapp config ssl import --resource-group MyResourceGroup --name MyFunctionApp --key-vault MyKeyVault --key-vault-certificate-name MyCertificateName
+  - name: Import an SSL certificate to a function app from Key Vault using resource id (typically if Key Vault is in another subscription).
+    text: az functionapp config ssl import --resource-group MyResourceGroup --name MyFunctionApp --key-vault '/subscriptions/[sub id]/resourceGroups/[rg]/providers/Microsoft.KeyVault/vaults/[vault name]' --key-vault-certificate-name MyCertificateName
+"""
+
+helps['functionapp config ssl create'] = """
+type: command
+short-summary: Create a Managed Certificate for a hostname in a function app.
+examples:
+  - name: Create a Managed Certificate for $fqdn.
+    text: az functionapp config ssl create --resource-group MyResourceGroup --name MyWebapp --hostname $fqdn
 """
 
 helps['functionapp cors'] = """
@@ -1178,6 +1188,16 @@ short-summary: Import an SSL certificate to a web app from Key Vault.
 examples:
   - name: Import an SSL certificate to a web app from Key Vault.
     text: az webapp config ssl import --resource-group MyResourceGroup --name MyWebapp --key-vault MyKeyVault --key-vault-certificate-name MyCertificateName
+  - name: Import an SSL certificate to a web app from Key Vault using resource id (typically if Key Vault is in another subscription).
+    text: az webapp config ssl import --resource-group MyResourceGroup --name MyWebapp --key-vault '/subscriptions/[sub id]/resourceGroups/[rg]/providers/Microsoft.KeyVault/vaults/[vault name]' --key-vault-certificate-name MyCertificateName
+"""
+
+helps['webapp config ssl create'] = """
+type: command
+short-summary: Create a Managed Certificate for a hostname in a webapp app.
+examples:
+  - name: Create a Managed Certificate for $fqdn.
+    text: az webapp config ssl create --resource-group MyResourceGroup --name MyWebapp --hostname $fqdn
 """
 
 helps['webapp config storage-account'] = """
@@ -1516,6 +1536,15 @@ examples:
         az webapp deployment user set --user-name MyUserName
 """
 
+helps['webapp deployment user show'] = """
+type: command
+short-summary: Get deployment publishing user.
+examples:
+  - name: Get publishing user information.
+    text: >
+        az webapp deployment user show
+"""
+
 helps['webapp hybrid-connection'] = """
 type: group
 short-summary: methods that list, add and remove hybrid-connections from webapps
@@ -1721,7 +1750,8 @@ type: command
 short-summary: >
     Create a webapp and deploy code from a local workspace to the app. The command is required to run from the folder
     where the code is present. Current support includes Node, Python, .NET Core and ASP.NET. Node,
-    Python apps are created as Linux apps. .Net Core, ASP.NET apps are created as Windows apps.
+    Python apps are created as Linux apps. .Net Core, ASP.NET, and static HTML apps are created as Windows apps.
+    Append the html flag to deploy as a static HTML app.
 examples:
   - name: View the details of the app that will be created, without actually running the operation
     text: >
@@ -1738,6 +1768,9 @@ examples:
   - name: Create a web app and enable log streaming after the deployment operation is complete. This will enable the default configuration required to enable log streaming.
     text: >
         az webapp up -n MyUniqueAppName --logs
+  - name: Create a web app and deploy as a static HTML app.
+    text: >
+        az webapp up -n MyUniqueAppName --html
 """
 
 helps['webapp update'] = """

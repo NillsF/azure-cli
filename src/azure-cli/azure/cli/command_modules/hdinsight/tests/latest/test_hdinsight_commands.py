@@ -50,6 +50,16 @@ class HDInsightClusterTests(ScenarioTest):
     # Uses 'rg' kwarg
     @ResourceGroupPreparer(name_prefix='hdicli-', location=location, random_name_length=12)
     @StorageAccountPreparer(name_prefix='hdicli', location=location, parameter_name='storage_account')
+    def test_hdinsight_cluster_kafka_with_rest_proxy(self, storage_account_info):
+        self._create_hdinsight_cluster(
+            HDInsightClusterTests._wasb_arguments(storage_account_info),
+            HDInsightClusterTests._kafka_arguments(),
+            HDInsightClusterTests._rest_proxy_arguments()
+        )
+
+    # Uses 'rg' kwarg
+    @ResourceGroupPreparer(name_prefix='hdicli-', location=location, random_name_length=12)
+    @StorageAccountPreparer(name_prefix='hdicli', location=location, parameter_name='storage_account')
     def test_hdinsight_cluster_kafka_with_optional_disk_args(self, storage_account_info):
         self._create_hdinsight_cluster(
             HDInsightClusterTests._wasb_arguments(storage_account_info),
@@ -92,6 +102,19 @@ class HDInsightClusterTests(ScenarioTest):
             HDInsightClusterTests._wasb_arguments(storage_account_info),
             HDInsightClusterTests._with_explicit_ssh_creds()
         )
+
+    @ResourceGroupPreparer(name_prefix='hdicli-', location=location, random_name_length=12)
+    @StorageAccountPreparer(name_prefix='hdicli', location=location, parameter_name='storage_account')
+    def test_hdinsight_cluster_with_minimal_tls_version(self, storage_account_info):
+        self._create_hdinsight_cluster(
+            HDInsightClusterTests._wasb_arguments(storage_account_info),
+            HDInsightClusterTests._with_minimal_tls_version('1.2')
+        )
+
+        self.cmd('az hdinsight show -n {cluster} -g {rg}', checks=[
+            self.check('properties.minSupportedTlsVersion', '1.2'),
+            self.check('properties.clusterState', 'Running')
+        ])
 
     # Uses 'rg' kwarg
     @ResourceGroupPreparer(name_prefix='hdicli-', location=location, random_name_length=12)
@@ -329,9 +352,16 @@ class HDInsightClusterTests(ScenarioTest):
         return '-t {} --workernode-data-disks-per-node {}'.format('kafka', '4')
 
     @staticmethod
+    def _rest_proxy_arguments():
+        return '--kafka-management-node-size {} --kafka-client-group-id {} --kafka-client-group-name {} -v 4.0 ' \
+               '--component-version {} --location {}'\
+            .format('Standard_D4_v2', '7bef90fa-0aa3-4bb4-b4d2-2ae7c14cfe41', 'KafakaRestProperties', 'kafka=2.1',
+                    '"South Central US"')
+
+    @staticmethod
     def _optional_data_disk_arguments():
         return '--workernode-data-disk-storage-account-type {} --workernode-data-disk-size {}'\
-               .format('Standard_LRS', '1023')
+            .format('Standard_LRS', '1023')
 
     @staticmethod
     def _rserver_arguments():
@@ -348,3 +378,7 @@ class HDInsightClusterTests(ScenarioTest):
     @staticmethod
     def _with_explicit_ssh_creds():
         return '--ssh-user {} --ssh-password {}'.format('sshuser', 'Password1!')
+
+    @staticmethod
+    def _with_minimal_tls_version(tls_version):
+        return '--minimal-tls-version {}'.format(tls_version)
